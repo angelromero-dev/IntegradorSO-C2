@@ -1,26 +1,17 @@
-/*
- * TechAssist - Sistema de Aprendizaje Interactivo
- * Copyright (c) 2024 TechAssist
- * Autor: Angel Jesús Romero Pérez
- * 
- * Este archivo es parte de TechAssist y está protegido por derechos de autor.
- * Uso no autorizado de este código está prohibido.
- */
-
 @font-face {
   font-family: 'bootstrap-icons';
   src: url('../fonts/bootstrap-icons.woff2') format('woff2'),
-       url('../fonts/bootstrap-icons.woff') format('woff');
+    url('../fonts/bootstrap-icons.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 /* Variables globales */
 :root {
- /* test */
- --gradient-hover: linear-gradient(135deg, rgba(67, 109, 111, 0.1), rgba(255, 113, 67, 0.1));
+  /* test */
+  --gradient-hover: linear-gradient(135deg, rgba(67, 109, 111, 0.1), rgba(255, 113, 67, 0.1));
   --gradient-active: linear-gradient(135deg, rgba(67, 109, 111, 0.2), rgba(255, 113, 67, 0.2));
-  --shadow-hover: 0 8px 25px rgba(0,0,0,0.2);
+  --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.2);
   --animation-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
@@ -28,12 +19,12 @@
   --spacing-lg: 2rem;
   --spacing-xl: 4rem;
 
-  
+
   --card-radius: 12px;
-    --transition-speed: 0.3s;
-    --shadow-soft: 0 4px 15px rgba(0,0,0,0.1);
-    --shadow-strong: 0 8px 30px rgba(0,0,0,0.15);
-    --gradient-light: linear-gradient(135deg, rgba(67, 109, 111, 0.05), rgba(255, 113, 67, 0.05));
+  --transition-speed: 0.3s;
+  --shadow-soft: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --shadow-strong: 0 8px 30px rgba(0, 0, 0, 0.15);
+  --gradient-light: linear-gradient(135deg, rgba(67, 109, 111, 0.05), rgba(255, 113, 67, 0.05));
   --padding-container: 100px 0;
 
 
@@ -47,17 +38,15 @@
   --orange: #ff7143 !important;
   --blue: #324e6c !important;
   --turquoise: #436d6f !important;
-  --degrade: linear-gradient(
-    135deg,
-    var(--blue) 0%,
-    var(--turquoise) 100%
-  ) !important;
+  --degrade: linear-gradient(135deg,
+      var(--blue) 0%,
+      var(--turquoise) 100%) !important;
 }
 
 /* Estilos generales */
-.favicon{
-  width: 30px;  
-  height: 30px; 
+.favicon {
+  width: 30px;
+  height: 30px;
 }
 
 li {
@@ -113,7 +102,7 @@ li {
 
 .title-main-1 {
   font-size: 1.5rem !important;
-  color:var(--orange) !important;
+  color: var(--orange) !important;
 }
 
 .reg-panel {
@@ -182,7 +171,7 @@ li {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
   transform: translateX(-100%);
   transition: 0.5s;
 }
@@ -285,6 +274,7 @@ li {
 .errorModal.accept-btn {
   background: var(--red-errors);
 }
+
 /* Footer */
 .footer {
   background: var(--degrade);
@@ -480,7 +470,7 @@ li {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--degrade); 
+  background-color: var(--degrade);
   border-radius: 5px;
   border: 2px solid #c4c5c5;
   transition: background-color 0.3s ease;
@@ -510,5 +500,4 @@ li {
   }
 }
 
-@media (max-width: 600px) {
-}
+@media (max-width: 600px) {}

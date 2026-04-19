@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#2091F9">
-  <title>AutoElite</title>
+  <meta name="theme-color" content="#0d0d0d">
+  <title>AutoElite — Agencia Automotriz Premium</title>
   
   <link href="./public/assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
   <link href='./public/assets/icons/bootstrap/bootstrap-icons.min.css' rel='stylesheet'>
@@ -15,14 +15,384 @@
   <link rel="shortcut icon" href="./public/assets/favicon/AutoElite-favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="./public/assets/css/index.css">
   <link rel="stylesheet" href="./public/assets/css/main.css">
+
+  <style>
+    /* ═══════════════════════════════════════════════════
+       PALETA GLOBAL — luxury automotive
+       Negro:   #0d0d0d  |  Antracita: #1a1a1a  |  Acero: #2e2e2e
+       Dorado:  #c9a84c  |  Oro claro: #e2c47a  |  Oro mate: #9e7e35
+       Crema:   #f5f0e8  |  Blanco roto: #faf9f7
+       Plata:   #b0b0b0  |  Humo: #7a7a7a
+    ═══════════════════════════════════════════════════ */
+
+    /* Fuerza variables globales sobre main.css/index.css */
+    :root {
+      --gold:        #c9a84c !important;
+      --gold-light:  #e2c47a !important;
+      --gold-dark:   #9e7e35 !important;
+      --black:       #0d0d0d !important;
+      --anthracite:  #1a1a1a !important;
+      --steel:       #2e2e2e !important;
+      --cream:       #f5f0e8 !important;
+      --off-white:   #faf9f7 !important;
+      --silver:      #b0b0b0 !important;
+      --smoke:       #7a7a7a !important;
+
+      /* Sobrescribe variables del main.css */
+      --orange:    #c9a84c !important;
+      --blue:      #1a1a1a !important;
+      --turquoise: #2e2e2e !important;
+      --degrade:   linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 60%, #2e2e2e 100%) !important;
+      --color-title: #0d0d0d !important;
+    }
+
+    /* ── Navbar override ─────────────────────────────── */
+    .navbar,
+    .navbar-dark,
+    .bg-primary {
+      background: linear-gradient(90deg, #0d0d0d 0%, #1a1a1a 50%, #0d0d0d 100%) !important;
+      border-bottom: 1px solid rgba(201,168,76,0.25) !important;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.6) !important;
+    }
+    .navbar-brand { color: #f5f0e8 !important; letter-spacing: 0.06em; }
+    .title-main-1 { color: #c9a84c !important; }
+    .nav-link { color: rgba(245,240,232,0.85) !important; letter-spacing: 0.06em; font-size: 0.8rem; }
+    .nav-link:hover, .nav-link.active { color: #c9a84c !important; }
+
+    /* ── Hero override ───────────────────────────────── */
+    .hero::before {
+      background-image:
+        linear-gradient(180deg, rgba(13,13,13,0.72) 0%, rgba(13,13,13,0.72) 100%),
+        url("./public/assets/images/index-banner.jpg") !important;
+    }
+    .hero_title { color: #f5f0e8 !important; }
+    .hero_pg    { color: rgba(245,240,232,0.80) !important; }
+
+    /* ── STATS BAR ─────────────────────────────────── */
+    .stats-bar {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 28px 40px;
+      background: linear-gradient(90deg, #0d0d0d 0%, #1a1a1a 50%, #0d0d0d 100%);
+      border-top: 1px solid rgba(201,168,76,0.3);
+      border-bottom: 1px solid rgba(201,168,76,0.3);
+    }
+    .stats-bar__item { text-align: center; color: #f5f0e8; }
+    .stats-bar__num {
+      display: block;
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: #c9a84c;
+    }
+    .stats-bar__label {
+      display: block;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.6);
+      margin-top: 5px;
+    }
+    .stats-bar__divider {
+      width: 1px; height: 44px;
+      background: rgba(201,168,76,0.2);
+    }
+    @media (max-width: 600px) { .stats-bar__divider { display: none; } }
+
+    /* ── OBJECT / SLIDER override ────────────────────── */
+    .object { background: #f5f0e8 !important; }
+    .object__course {
+      background: #1a1a1a !important;
+      color: #c9a84c !important;
+    }
+    .subtitle { color: #1a1a1a !important; }
+    .object__arrow { filter: brightness(0) saturate(100%) invert(75%) sepia(30%) saturate(500%) hue-rotate(5deg); }
+
+    .object__badge {
+      display: inline-block;
+      background: #c9a84c;
+      color: #0d0d0d;
+      font-size: 0.62rem; font-weight: 800;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      padding: 4px 14px; border-radius: 20px;
+      margin-bottom: 10px;
+    }
+    .object__link-oficial {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-top: 14px; padding: 10px 22px; border-radius: 6px;
+      background: #0d0d0d; color: #c9a84c;
+      border: 1.5px solid #c9a84c;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      text-decoration: none; transition: background .2s, color .2s, transform .2s;
+    }
+    .object__link-oficial:hover {
+      background: #c9a84c; color: #0d0d0d;
+      text-decoration: none; transform: translateY(-2px);
+    }
+    .object__link-oficial i { font-size: 0.9rem; }
+    .object__link-cotizar {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-top: 10px; margin-left: 10px; padding: 10px 22px; border-radius: 6px;
+      background: transparent; color: #2e2e2e;
+      border: 1.5px solid #2e2e2e;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      text-decoration: none; transition: background .2s, color .2s, transform .2s;
+    }
+    .object__link-cotizar:hover {
+      background: #1a1a1a; color: #c9a84c;
+      border-color: #1a1a1a;
+      text-decoration: none; transform: translateY(-2px);
+    }
+
+    /* ── KNOWLEDGE section override ──────────────────── */
+    .knowledge {
+      background-color: #1a1a1a !important;
+      background-image:
+        radial-gradient(rgba(201,168,76,0.12) 0.5px, transparent 0.5px),
+        radial-gradient(rgba(201,168,76,0.12) 0.5px, #1a1a1a 0.5px) !important;
+      background-size: 20px 20px !important;
+      background-position: 0 0, 10px 10px !important;
+    }
+    .knowledge .subtitle { color: #f5f0e8 !important; }
+    .knowledge__paragraph { color: rgba(245,240,232,0.75) !important; }
+    .cta-2 {
+      background: #c9a84c !important;
+      color: #0d0d0d !important;
+      font-weight: 700 !important;
+      border-radius: 6px !important;
+      letter-spacing: 0.1em !important;
+      transition: background .2s, transform .2s !important;
+    }
+    .cta-2:hover {
+      background: #e2c47a !important;
+      color: #0d0d0d !important;
+      transform: translateY(-2px) !important;
+    }
+
+    /* ── MARCAS ─────────────────────────────────────── */
+    .brands { padding: 72px 0 60px; background: #faf9f7; }
+    .brands__eyebrow {
+      display: block; text-align: center;
+      font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
+      color: #9e7e35; margin-bottom: 6px; font-weight: 700;
+    }
+    .brands__title {
+      text-align: center; font-size: 1.75rem; font-weight: 700;
+      color: #0d0d0d; margin-bottom: 48px;
+    }
+    .brands__title span { color: #c9a84c; }
+    .brands__grid {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 16px; padding: 0 40px;
+    }
+    .brands__card {
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+      padding: 24px 20px; min-width: 140px;
+      background: #fff; border-radius: 10px;
+      border: 1.5px solid #e0d9ce;
+      text-decoration: none; color: #5a5a5a;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+      transition: border-color .25s, box-shadow .25s, transform .25s, color .25s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .brands__card:hover {
+      border-color: #c9a84c;
+      box-shadow: 0 6px 24px rgba(201,168,76,0.15);
+      transform: translateY(-4px);
+      color: #9e7e35;
+      text-decoration: none;
+    }
+    .brands__card i { font-size: 2.2rem; color: #1a1a1a; transition: color .25s; }
+    .brands__card:hover i { color: #c9a84c; }
+    .brands__note {
+      text-align: center; margin-top: 32px;
+      font-size: 0.78rem; color: #7a7a7a;
+    }
+    .brands__note a { color: #9e7e35; text-decoration: none; font-weight: 700; }
+    .brands__note a:hover { color: #c9a84c; text-decoration: underline; }
+
+    /* ── FINANCIAMIENTO ─────────────────────────────── */
+    .financing { padding: 72px 0 60px; background: #0d0d0d; }
+    .financing__eyebrow {
+      display: block; text-align: center;
+      font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
+      color: #c9a84c; margin-bottom: 6px; font-weight: 700;
+    }
+    .financing__title {
+      text-align: center; font-size: 1.75rem; font-weight: 700;
+      color: #f5f0e8; margin-bottom: 12px;
+    }
+    .financing__sub {
+      text-align: center; color: #b0b0b0; font-size: 0.88rem;
+      max-width: 560px; margin: 0 auto 48px; line-height: 1.7;
+    }
+    .financing__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px; padding: 0 40px;
+    }
+    .financing__card {
+      border-radius: 12px; padding: 32px 28px;
+      border: 1px solid rgba(201,168,76,0.15);
+      background: #1a1a1a;
+      transition: border-color .25s, box-shadow .25s, transform .25s;
+      position: relative; overflow: hidden;
+    }
+    .financing__card:hover {
+      border-color: rgba(201,168,76,0.5);
+      box-shadow: 0 8px 32px rgba(201,168,76,0.08);
+      transform: translateY(-4px);
+    }
+    .financing__card--featured {
+      border-color: #c9a84c;
+      background: linear-gradient(145deg, #1e1a0f 0%, #1a1a1a 100%);
+    }
+    .financing__card--featured::before {
+      content: 'MAS POPULAR';
+      position: absolute; top: 0; right: 0;
+      background: #c9a84c; color: #0d0d0d;
+      font-size: 0.55rem; font-weight: 900; letter-spacing: 0.22em;
+      padding: 5px 14px; border-radius: 0 0 0 10px;
+    }
+    .financing__icon { font-size: 2rem; margin-bottom: 16px; color: #c9a84c; }
+    .financing__plan {
+      font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: #9e7e35; font-weight: 700; margin-bottom: 6px;
+    }
+    .financing__card-title {
+      font-size: 1.25rem; font-weight: 700; color: #f5f0e8; margin-bottom: 10px;
+    }
+    .financing__desc {
+      font-size: 0.8rem; color: #b0b0b0; line-height: 1.7; margin-bottom: 20px;
+    }
+    .financing__features {
+      list-style: none; padding: 0; margin: 0 0 24px;
+      display: flex; flex-direction: column; gap: 9px;
+    }
+    .financing__features li {
+      font-size: 0.8rem; display: flex; align-items: center; gap: 9px; color: #d4cfc7;
+    }
+    .financing__features li i { color: #c9a84c; font-size: 0.9rem; }
+    .financing__cta {
+      display: block; text-align: center;
+      padding: 12px 20px; border-radius: 6px;
+      background: #c9a84c; color: #0d0d0d;
+      font-size: 0.75rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;
+      text-decoration: none; border: none; cursor: pointer;
+      transition: background .25s, transform .2s;
+    }
+    .financing__cta:hover {
+      background: #e2c47a; color: #0d0d0d;
+      transform: translateY(-1px); text-decoration: none;
+    }
+    .financing__cta--outline {
+      background: transparent;
+      border: 1.5px solid rgba(201,168,76,0.5);
+      color: #c9a84c;
+    }
+    .financing__cta--outline:hover {
+      background: #c9a84c; color: #0d0d0d;
+      border-color: #c9a84c;
+    }
+
+    /* ── TESTIMONIOS ────────────────────────────────── */
+    .testimonials { padding: 72px 0 60px; background: #faf9f7; }
+    .testimonials__eyebrow {
+      display: block; text-align: center;
+      font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
+      color: #9e7e35; margin-bottom: 6px; font-weight: 700;
+    }
+    .testimonials__title {
+      text-align: center; font-size: 1.75rem; font-weight: 700;
+      color: #0d0d0d; margin-bottom: 48px;
+    }
+    .testimonials__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px; padding: 0 40px;
+    }
+    .testimonial {
+      background: #fff; border-radius: 12px; padding: 32px 28px;
+      border: 1px solid #e0d9ce;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+      transition: box-shadow .25s, transform .25s;
+      position: relative;
+    }
+    .testimonial:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.09);
+      transform: translateY(-4px);
+      border-color: rgba(201,168,76,0.4);
+    }
+    .testimonial__quote-icon {
+      font-size: 3.5rem; line-height: 1; color: rgba(201,168,76,0.15);
+      font-family: Georgia, serif; position: absolute; top: 18px; right: 22px;
+    }
+    .testimonial__stars { color: #c9a84c; font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 14px; }
+    .testimonial__text {
+      font-size: 0.88rem; color: #4a4a4a; line-height: 1.78;
+      font-style: italic; margin-bottom: 22px;
+    }
+    .testimonial__author { display: flex; align-items: center; gap: 12px; }
+    .testimonial__avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: linear-gradient(135deg, #1a1a1a, #2e2e2e);
+      border: 2px solid #c9a84c;
+      display: flex; align-items: center; justify-content: center;
+      color: #c9a84c; font-weight: 800; font-size: 0.9rem; flex-shrink: 0;
+    }
+    .testimonial__name { font-size: 0.85rem; font-weight: 700; color: #0d0d0d; }
+    .testimonial__car { font-size: 0.7rem; color: #9e7e35; font-weight: 600; letter-spacing: 0.06em; }
+
+    /* ── HERO tag ────────────────────────────────────── */
+    .hero_subtitle_tag {
+      display: inline-block;
+      background: rgba(201,168,76,0.12);
+      border: 1px solid rgba(201,168,76,0.35);
+      color: #e2c47a; font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      padding: 6px 18px; border-radius: 20px;
+      margin-bottom: 18px; backdrop-filter: blur(4px);
+    }
+
+    /* ── Footer override ─────────────────────────────── */
+    .footer {
+      background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 60%, #0d0d0d 100%) !important;
+      border-top: 1px solid rgba(201,168,76,0.2) !important;
+    }
+    .footer__title { color: #c9a84c !important; }
+    .footer__title::after { background: #c9a84c !important; }
+    .footer__social-icon:hover { color: #c9a84c !important; }
+    .footer__link:hover { color: #c9a84c !important; }
+    .footer__contact i { color: #c9a84c !important; }
+
+    /* ── Bootstrap badge/button global purge ─────────── */
+    .navbar-toggler { border-color: rgba(201,168,76,0.4) !important; }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(201,168,76,0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    }
+
+    @media (max-width: 768px) {
+      .brands__grid, .financing__grid, .testimonials__grid { padding: 0 16px; }
+      .brands__card { min-width: 110px; padding: 18px 12px; }
+      .financing__card, .testimonial { padding: 24px 20px; }
+    }
+  </style>
 </head>
 
 <body>
 
+  <!-- ════ NAV ════ -->
   <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-      <a class="navbar-brand" href="#"><span class="title-main-1">A</span>uto<span class="title-main-1">E</span>lite <img src="./public/assets/favicon/AutoElite-favicon.png" class="favicon" alt=""></a>
-      <button class="navbar-toggler" style="color:#ff7143 !important;" type="button" data-bs-toggle="collapse"
+      <a class="navbar-brand" href="#">
+        <span class="title-main-1">A</span>uto<span class="title-main-1">E</span>lite
+        <img src="./public/assets/favicon/AutoElite-favicon.png" class="favicon" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -31,189 +401,252 @@
           <li class="nav-item">
             <a class="nav-link active" href="#inicio"><i class="bi bi-house"></i> Inicio</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#catalogo-section"><i class="bi bi-car-front"></i> Catálogo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#marcas-section"><i class="bi bi-award"></i> Marcas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#financiamiento-section"><i class="bi bi-credit-card"></i> Financiamiento</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto-section"><i class="bi bi-telephone"></i> Contacto</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
+  <!-- ════ HERO ════ -->
   <header class="hero" id="inicio">
     <section class="hero__container container">
-      <h1 class="hero_title">Encuentra el vehículo ideal: Sedanes, SUVs & Más</h1>
-      <p class="hero_pg">¡Aquí descubrirás las mejores opciones automotrices, desde autos compactos hasta pickups de trabajo pesado!</p>
-      <p><i class="bi bi-car-front-fill" style="font-size: 75px !important;"></i><i class="bi bi-ev-front-fill" style="font-size: 75px !important; color: var(--orange);"></i></p>
+      <span class="hero_subtitle_tag">✦ Agencia Automotriz Premium — Cuernavaca, Morelos</span>
+      <h1 class="hero_title">Encuentra el vehículo ideal:<br>Sedanes, SUVs &amp; Más</h1>
+      <p class="hero_pg">
+        ¡Aquí descubrirás las mejores opciones automotrices, desde autos compactos hasta pickups de trabajo pesado!
+        Asesoría personalizada, financiamiento flexible y posventa de clase mundial.
+      </p>
+      <p>
+        <i class="bi bi-car-front-fill" style="font-size: 75px !important; color: #f5f0e8;"></i>
+        <i class="bi bi-ev-front-fill" style="font-size: 75px !important; color: #c9a84c;"></i>
+      </p>
     </section>
   </header>
 
-  <section class="object">
+  <!-- ════ STATS BAR ════ -->
+  <div class="stats-bar">
+    <div class="stats-bar__item">
+      <span class="stats-bar__num">+1,200</span>
+      <span class="stats-bar__label">Vehículos Vendidos</span>
+    </div>
+    <div class="stats-bar__divider"></div>
+    <div class="stats-bar__item">
+      <span class="stats-bar__num">98%</span>
+      <span class="stats-bar__label">Clientes Satisfechos</span>
+    </div>
+    <div class="stats-bar__divider"></div>
+    <div class="stats-bar__item">
+      <span class="stats-bar__num">8 Marcas</span>
+      <span class="stats-bar__label">Representadas</span>
+    </div>
+    <div class="stats-bar__divider"></div>
+    <div class="stats-bar__item">
+      <span class="stats-bar__num">7 Años</span>
+      <span class="stats-bar__label">De Experiencia</span>
+    </div>
+    <div class="stats-bar__divider"></div>
+    <div class="stats-bar__item">
+      <span class="stats-bar__num">24/7</span>
+      <span class="stats-bar__label">Soporte Posventa</span>
+    </div>
+  </div>
+
+  <!-- ════ SLIDER ════ -->
+  <section class="object" id="catalogo-section">
     <div class="object__container">
       <img src="./public/assets/icons/leftarrow.svg" class="object__arrow" id="before">
 
+      <!-- 1 · Nissan Versa -->
       <section class="object__body object__body--show" data-id="1">
         <div class="object__texts">
-          <h2 class="subtitle">Nissan Versa 2024 Advance CVT, <span
-              class="object__course">¡Excelente opción en sedanes compactos con gran relación
-              calidad-precio!</span></h2>
+          <span class="object__badge"><i class="bi bi-star-fill"></i> Más Vendido</span>
+          <h2 class="subtitle">Nissan Versa 2024 Advance CVT,
+            <span class="object__course">¡Excelente opción en sedanes compactos con gran relación calidad-precio!</span>
+          </h2>
           <div class="object__review">
-            <p>Motor: 1.6L de 4 cilindros</p>
-            <p>Transmisión: Automática Xtronic CVT</p>
-            <p>Rendimiento: Hasta 20 km/l en carretera</p>
-            <p>Seguridad: 6 bolsas de aire y frenado automático de emergencia</p>
-            <p>Tecnología: Pantalla táctil de 8" compatible con Apple CarPlay y Android Auto</p>
+            <p><strong>Motor:</strong> 1.6L de 4 cilindros</p>
+            <p><strong>Transmisión:</strong> Automática Xtronic CVT</p>
+            <p><strong>Rendimiento:</strong> Hasta 20 km/l en carretera</p>
+            <p><strong>Seguridad:</strong> 6 bolsas de aire y frenado automático de emergencia</p>
+            <p><strong>Tecnología:</strong> Pantalla táctil de 8" — Apple CarPlay y Android Auto</p>
             <br>
-            <p>Otras características: Cámara de reversa, llave inteligente, encendido por botón</p>
+            <p>Cámara de reversa · Llave inteligente · Encendido por botón</p>
             <p>Ideal para el día a día en la ciudad y viajes familiares cortos</p>
             <p>Destaca por su bajo costo de mantenimiento a largo plazo</p>
+            <div>
+              <a href="https://www.nissan.com.mx/autos/versa.html" target="_blank" rel="noopener" class="object__link-oficial">
+                <i class="bi bi-box-arrow-up-right"></i> Ver en Nissan.mx
+              </a>
+              <a href="#contacto-section" class="object__link-cotizar">
+                <i class="bi bi-chat-dots"></i> Cotizar
+              </a>
+            </div>
           </div>
         </div>
-
         <figure class="object__picture">
-          <img src="./public/assets/images/PocoX5.png" class="object__img">
+          <img src="./public/assets/images/PocoX5.png" class="object__img" alt="Nissan Versa 2024">
         </figure>
       </section>
 
+      <!-- 2 · Honda CR-V -->
       <section class="object__body" data-id="2">
         <div class="object__texts">
-          <h2 class="subtitle">Honda CR-V 2024 Touring 1.5L Turbo, Asientos de Piel, Quemacocos eléctrico,<span class="object__course">¡Una
-              SUV muy versátil, con gran espacio interior
-              y comodidad!, altamente recomendable para familias y viajes largos.</span></h2>
+          <span class="object__badge" style="background:#9e7e35; color:#faf9f7;"><i class="bi bi-people-fill"></i> Ideal Familiar</span>
+          <h2 class="subtitle">Honda CR-V 2024 Touring 1.5L Turbo, Asientos de Piel, Quemacocos eléctrico,
+            <span class="object__course">¡SUV versátil, espaciosa y muy cómoda para familias y viajes largos!</span>
+          </h2>
           <div class="object__review">
-            <p>Motor: 1.5L Turbo de 4 cilindros</p>
-            <p>Potencia: 188 caballos de fuerza</p>
-            <p>Capacidad: 5 pasajeros con cajuela extra amplia</p>
-            <p>Transmisión: Automática CVT con modo deportivo</p>
-            <p>Rines: Aluminio de 18 pulgadas</p>
-            <p>Seguridad: Sistema Honda Sensing (mantenimiento de carril, control crucero adaptativo)</p>
-            <p>Climatización: Aire acondicionado automático de doble zona</p>
-            <p>Tracción: FWD (Tracción delantera)</p>
-            <br>
-            <p>Consideraciones:</p>
-            <br>
-            <p>Excelente valor de reventa en el mercado.</p>
-            <p>El sistema de infoentretenimiento puede ser un poco básico comparado con otras opciones premium.</p>
-            <p>Comparar pruebas de manejo con otras SUVs de su segmento antes de decidir.</p>
+            <p><strong>Motor:</strong> 1.5L Turbo de 4 cilindros — 188 hp</p>
+            <p><strong>Transmisión:</strong> Automática CVT con modo deportivo</p>
+            <p><strong>Capacidad:</strong> 5 pasajeros con cajuela extra amplia</p>
+            <p><strong>Seguridad:</strong> Honda Sensing — mantenimiento de carril, crucero adaptativo</p>
+            <p><strong>Climatización:</strong> A/C automático de doble zona</p>
+            <p>Rines de aluminio 18" · Tracción FWD · Excelente valor de reventa en el mercado</p>
+            <div>
+              <a href="https://www.honda.com.mx/autos/cr-v.html" target="_blank" rel="noopener" class="object__link-oficial" style="background:#0d0d0d; border-color:#9e7e35; color:#9e7e35;">
+                <i class="bi bi-box-arrow-up-right"></i> Ver en Honda.mx
+              </a>
+              <a href="#contacto-section" class="object__link-cotizar" style="color:#9e7e35; border-color:#9e7e35;">
+                <i class="bi bi-chat-dots"></i> Cotizar
+              </a>
+            </div>
           </div>
         </div>
-
         <figure class="object__picture">
-          <img src="./public/assets/images/msi GF63.png" class="object__img">
+          <img src="./public/assets/images/msi GF63.png" class="object__img" alt="Honda CR-V 2024">
         </figure>
       </section>
 
+      <!-- 3 · Ford Mustang -->
       <section class="object__body" data-id="3">
         <div class="object__texts">
-          <h2 class="subtitle">Ford Mustang GT V8 2024 Edición Especial de Alto Rendimiento, <span class="object__course">¡Un auto deportivo poderoso!, ideal para los amantes de la velocidad y usuarios
-              exigentes </span></h2>
+          <span class="object__badge" style="background:#2e2e2e; color:#e2c47a;"><i class="bi bi-lightning-charge-fill"></i> Alto Rendimiento</span>
+          <h2 class="subtitle">Ford Mustang GT V8 2024 Edición Especial de Alto Rendimiento,
+            <span class="object__course">¡Un auto deportivo poderoso!, ideal para los amantes de la velocidad y usuarios exigentes.</span>
+          </h2>
           <div class="object__review">
-            <p>Motor: 5.0L V8 Coyote de 4ta Generación</p>
-            <p>Potencia: 486 Caballos de Fuerza</p>
-            <p>Aceleración: 0 a 100 km/h en 4.3 segundos</p>
-            <p>Transmisión: Automática de 10 velocidades con paletas al volante</p>
-            <p>Tracción: RWD (Trasera) con diferencial de deslizamiento limitado</p>
+            <p><strong>Motor:</strong> 5.0L V8 Coyote de 4ta Generación</p>
+            <p><strong>Potencia:</strong> 486 Caballos de Fuerza</p>
+            <p><strong>Aceleración:</strong> 0 a 100 km/h en 4.3 segundos</p>
+            <p><strong>Transmisión:</strong> Automática de 10 velocidades con paletas al volante</p>
+            <p><strong>Tracción:</strong> RWD con diferencial de deslizamiento limitado</p>
             <br>
-            <br>
-            <p>El tope de gama en los "muscle cars" americanos modernos.</p>
-            <p>El Mustang GT compite directamente en sensaciones y potencia con deportivos europeos.</p>
-            <p>Cuenta con modos de manejo personalizables: Pista, Drag, Deportivo y Nieve/Lluvia.</p>
-            <p>Su precio de lista refleja su exclusividad y estatus premium.</p>
-            <p>Lo único a tener a consideración es su alto consumo de combustible en ciudad, pero sin embargo, 
-              el sonido del motor V8 y la respuesta del acelerador ofrecen una experiencia 
-              de conducción emocionante e inigualable, especialmente en carreteras abiertas o pista.</p>
+            <p>Modos personalizables: Pista, Drag, Deportivo y Nieve/Lluvia</p>
+            <p>El tope de gama en los muscle cars americanos modernos</p>
+            <p>El sonido del V8 y la respuesta del acelerador ofrecen una experiencia inigualable</p>
+            <div>
+              <a href="https://www.ford.com.mx/autos/mustang/" target="_blank" rel="noopener" class="object__link-oficial" style="background:#0d0d0d; border-color:#e2c47a; color:#e2c47a;">
+                <i class="bi bi-box-arrow-up-right"></i> Ver en Ford.mx
+              </a>
+              <a href="#contacto-section" class="object__link-cotizar" style="color:#2e2e2e; border-color:#2e2e2e;">
+                <i class="bi bi-chat-dots"></i> Cotizar
+              </a>
+            </div>
           </div>
         </div>
-
         <figure class="object__picture">
-          <img src="./public/assets/images/Rx 7800xt spectral.webp" class="object__img">
+          <img src="./public/assets/images/Rx 7800xt spectral.webp" class="object__img" alt="Ford Mustang GT V8 2024">
         </figure>
       </section>
 
+      <!-- 4 · Toyota Hilux -->
       <section class="object__body" data-id="4">
         <div class="object__texts">
-          <h2 class="subtitle">Toyota Hilux 2024 Doble Cabina SR, Diésel 2.8L, Tracción 4x4, Capacidad de Carga de 1 Tonelada, Suspensión Reforzada, <span class="object__course">¡Una
-              pickup ideal para el trabajo pesado y la aventura todoterreno!</span></h2>
+          <span class="object__badge" style="background:#1a1a1a; color:#c9a84c; border: 1.5px solid #c9a84c;"><i class="bi bi-truck"></i> Trabajo Pesado</span>
+          <h2 class="subtitle">Toyota Hilux 2024 Doble Cabina SR, Diésel 2.8L, Tracción 4x4, Capacidad de Carga de 1 Tonelada,
+            <span class="object__course">¡La pickup ideal para el trabajo pesado y la aventura todoterreno!</span>
+          </h2>
           <div class="object__review">
-            <p>Cabina: Doble, con capacidad para 5 pasajeros</p>
-            <p>Motor: Diésel 2.8L de 4 cilindros con Turbo de Geometría Variable</p>
-            <p>Torque: 369 lb-pie de pura fuerza de arrastre</p>
-            <p>Carga útil: Más de 1,000 kg en la batea</p>
-            <p>Tracción:
-              4x4 conectable
-              Caja reductora (High/Low)
-              Bloqueo de diferencial trasero</p>
-            <p>Transmisión: Manual de 6 velocidades</p>
-            <p>Seguridad: 7 bolsas de aire, Control de Estabilidad, Asistencia en pendientes</p>
-            <p>Tecnología: Pantalla táctil de 8" con conectividad para smartphones</p>
+            <p><strong>Motor:</strong> Diésel 2.8L con Turbo de Geometría Variable</p>
+            <p><strong>Torque:</strong> 369 lb-pie de pura fuerza de arrastre</p>
+            <p><strong>Carga útil:</strong> Más de 1,000 kg en la batea</p>
+            <p><strong>Tracción:</strong> 4x4 conectable · Caja reductora High/Low · Bloqueo de diferencial</p>
+            <p><strong>Transmisión:</strong> Manual de 6 velocidades</p>
+            <p><strong>Seguridad:</strong> 7 bolsas de aire · ESC · Asistencia en pendientes</p>
             <br>
-            <p>Otros:
-              Chasis ultra resistente de acero
-              Altura libre al suelo superior
-              Espejos y cristales eléctricos
-              Capacidad de vadeo excelente
-              Confiabilidad legendaria</p>
-            <br>
-            <p>Contras:
-              Marcha algo rígida y rebotona cuando la batea va vacía
-              Menor aislamiento acústico en cabina
-              Dimensiones grandes para estacionar en espacios estrechos urbanos
-              Diseño interior más enfocado a la durabilidad que al lujo</p>
+            <p>Chasis de acero ultra resistente · Confiabilidad legendaria · Capacidad de vadeo superior</p>
+            <div>
+              <a href="https://www.toyota.com.mx/hilux" target="_blank" rel="noopener" class="object__link-oficial">
+                <i class="bi bi-box-arrow-up-right"></i> Ver en Toyota.mx
+              </a>
+              <a href="#contacto-section" class="object__link-cotizar">
+                <i class="bi bi-chat-dots"></i> Cotizar
+              </a>
+            </div>
           </div>
         </div>
-
         <figure class="object__picture">
-          <img src="./public/assets/images/Xiaomi 11T Pro.jpg" class="object__img">
+          <img src="./public/assets/images/Xiaomi 11T Pro.jpg" class="object__img" alt="Toyota Hilux 2024">
         </figure>
       </section>
 
+      <!-- 5 · Toyota Prius -->
       <section class="object__body" data-id="5">
         <div class="object__texts">
-          <h2 class="subtitle">Toyota Prius 2024 Híbrido - Motor 2.0L + Eléctrico - Diseño Aerodinámico - Máxima Eficiencia,
+          <span class="object__badge" style="background:#4a5240; color:#e2c47a;"><i class="bi bi-leaf-fill"></i> Eco Híbrido</span>
+          <h2 class="subtitle">Toyota Prius 2024 Híbrido — Motor 2.0L + Eléctrico — Máxima Eficiencia,
             <span class="object__course">¡El auto ideal para quienes buscan el máximo ahorro de gasolina y cuidar el medio ambiente!</span>
           </h2>
           <div class="object__review">
-            <p>Toyota Prius Híbrido:</p>
-            <p>Especificaciones del Tren Motriz:</p>
-            <p>Combustión: Motor de 2.0L de ciclo Atkinson</p>
-            <p>Eléctrico: Motor generador de imanes permanentes</p>
-            <p>Potencia Combinada: 194 Caballos de fuerza</p>
-            <p>Transmisión: Engranaje planetario (e-CVT)</p>
-            <p>Batería: Iones de litio de alta densidad</p>
-            <p>Eficiencia y Rendimiento:</p>
-            <p>Rendimiento combinado: Más de 25 km/l según condiciones de manejo</p>
-            <p>Emisiones: Ultra bajas, califica para incentivos ecológicos</p>
-            <p>Aerodinámica: Coeficiente de fricción optimizado para cortar el viento</p>
-            <p>Tecnología de Asistencia:</p>
-            <p>Frenado regenerativo: Recarga la batería al desacelerar</p>
-            <p>Modos de manejo: EV (100% eléctrico a bajas velocidades), Eco, Normal y Power</p>
-            <p>El Prius ofrece un rendimiento sobresaliente gracias a la perfecta sincronía entre su motor a gasolina 
-              y su sistema eléctrico, es decir que no se necesita enchufar para recargarlo, siendo la mejor 
-              opción para quienes buscan movilidad inteligente y bajo impacto ambiental.</p>
+            <p><strong>Tren Motriz:</strong> Motor 2.0L ciclo Atkinson + Eléctrico de imanes permanentes</p>
+            <p><strong>Potencia Combinada:</strong> 194 Caballos de fuerza</p>
+            <p><strong>Rendimiento:</strong> Más de 25 km/l combinado</p>
+            <p><strong>Frenado regenerativo:</strong> Recarga la batería al desacelerar — sin enchufar</p>
+            <p><strong>Emisiones:</strong> Ultra bajas — califica para incentivos ecológicos</p>
+            <p>Modos: EV · Eco · Normal · Power · Batería de iones de litio de alta densidad</p>
+            <div>
+              <a href="https://www.toyota.com.mx/prius" target="_blank" rel="noopener" class="object__link-oficial" style="background:#0d0d0d; border-color:#4a5240; color:#c9a84c;">
+                <i class="bi bi-box-arrow-up-right"></i> Ver en Toyota.mx
+              </a>
+              <a href="#contacto-section" class="object__link-cotizar" style="color:#4a5240; border-color:#4a5240;">
+                <i class="bi bi-chat-dots"></i> Cotizar
+              </a>
+            </div>
           </div>
         </div>
-
         <figure class="object__picture">
-          <img src="./public/assets/images/Rizen 5 5600G.png" class="object__img">
+          <img src="./public/assets/images/Rizen 5 5600G.png" class="object__img" alt="Toyota Prius 2024">
         </figure>
       </section>
 
+      <!-- 6 · Mazda 3 -->
       <section class="object__body" data-id="6">
         <div class="object__texts">
-          <h2 class="subtitle">Mazda 3 Sedán 2024 Signature 2.5L Turbo AWD Piel, <span class="object__course">¡Un
-              sedán perfecto para conductores que buscan un equilibrio entre un diseño premium, confort y manejo dinámico!</span>
+          <span class="object__badge" style="background:#c9a84c; color:#0d0d0d;"><i class="bi bi-gem"></i> Premium</span>
+          <h2 class="subtitle">Mazda 3 Sedán 2024 Signature 2.5L Turbo AWD Piel,
+            <span class="object__course">¡Diseño Kodo, tracción integral y audio Bose® — el sedán premium más deseado del segmento!</span>
           </h2>
           <div class="object__review">
-            <p>Diseño Exterior: Líneas fluidas estilo Kodo, Faros LED dirigibles, Rines de aluminio de 18"</p>
-            <p>Motor: 2.5L Turbo SKYACTIV-G</p>
-            <p>Potencia: 227 caballos de fuerza y 310 lb-pie de torque</p>
-            <p>Transmisión: Automática SKYACTIV-Drive de 6 velocidades con modo manual</p>
-            <p>Tracción: i-ACTIV AWD (Tracción integral en las cuatro ruedas)</p>
-            <p>Interior: Asientos tapizados en piel genuina, Head-Up display proyectado en parabrisas</p>
-            <p>Sonido: Sistema de audio premium Bose® de 12 bocinas</p>
-            <p>Seguridad: Monitor de punto ciego, Cámara de visión 360 grados, Alerta de tráfico cruzado</p>
-            <p>Otros: Quemacocos eléctrico, Paletas de cambios al volante, Acabados suaves al tacto en toda la cabina</p>
+            <p><strong>Diseño:</strong> Líneas fluidas Kodo · Faros LED dirigibles · Rines de aluminio 18"</p>
+            <p><strong>Motor:</strong> 2.5L Turbo SKYACTIV-G — 227 hp y 310 lb-pie de torque</p>
+            <p><strong>Transmisión:</strong> Automática SKYACTIV-Drive de 6 velocidades con modo manual</p>
+            <p><strong>Tracción:</strong> i-ACTIV AWD (Tracción integral en las cuatro ruedas)</p>
+            <p><strong>Audio:</strong> Sistema Bose® de 12 bocinas</p>
+            <p><strong>Seguridad:</strong> Punto ciego · Cámara 360° · Alerta de tráfico cruzado</p>
+            <p>Head-Up Display · Quemacocos · Piel genuina · Paletas al volante</p>
+            <div>
+              <a href="https://www.mazdamexico.com.mx/modelos/sedanes/mazda3-sedan" target="_blank" rel="noopener" class="object__link-oficial">
+                <i class="bi bi-box-arrow-up-right"></i> Ver en Mazda.mx
+              </a>
+              <a href="#contacto-section" class="object__link-cotizar">
+                <i class="bi bi-chat-dots"></i> Cotizar
+              </a>
+            </div>
           </div>
         </div>
-
         <figure class="object__picture">
-          <img src="./public/assets/images/MackBook Air 8gb.webp" class="object__img">
+          <img src="./public/assets/images/MackBook Air 8gb.webp" class="object__img" alt="Mazda 3 Sedán 2024">
         </figure>
       </section>
 
@@ -221,6 +654,44 @@
     </div>
   </section>
 
+  <!-- ════ MARCAS ════ -->
+  <section class="brands" id="marcas-section">
+    <div class="container">
+      <span class="brands__eyebrow">✦ Marcas que Representamos</span>
+      <h2 class="brands__title">Nuestras <span>Alianzas Oficiales</span></h2>
+      <div class="brands__grid">
+        <a href="https://www.nissan.com.mx" target="_blank" rel="noopener" class="brands__card">
+          <i class="bi bi-circle-fill"></i> Nissan
+        </a>
+        <a href="https://www.honda.com.mx" target="_blank" rel="noopener" class="brands__card">
+          <i class="bi bi-circle"></i> Honda
+        </a>
+        <a href="https://www.toyota.com.mx" target="_blank" rel="noopener" class="brands__card">
+          <i class="bi bi-gear-fill"></i> Toyota
+        </a>
+        <a href="https://www.ford.com.mx" target="_blank" rel="noopener" class="brands__card">
+          <i class="bi bi-diamond-fill"></i> Ford
+        </a>
+        <a href="https://www.mazdamexico.com.mx" target="_blank" rel="noopener" class="brands__card">
+          <i class="bi bi-hypnotize"></i> Mazda
+        </a>
+        <a href="https://www.chevrolet.com.mx" target="_blank" rel="noopener" class="brands__card">
+          <i class="bi bi-plus-circle-fill"></i> Chevrolet
+        </a>
+        <a href="https://www.kia.com/mx" target="_blank" rel="noopener" class="brands__card">
+          <i class="bi bi-triangle-fill"></i> Kia
+        </a>
+        <a href="https://www.volkswagen.com.mx" target="_blank" rel="noopener" class="brands__card">
+          <i class="bi bi-circle-half"></i> Volkswagen
+        </a>
+      </div>
+      <p class="brands__note">
+        ¿Buscas una marca diferente? <a href="#contacto-section">Contáctanos</a> y con gusto te asesoramos.
+      </p>
+    </div>
+  </section>
+
+  <!-- ════ KNOWLEDGE ════ -->
   <section class="knowledge">
     <div class="knowledge__container container">
       <div class="knowledege__texts">
@@ -234,61 +705,236 @@
           sobre los calendarios de mantenimiento preventivo y te recomendamos accesorios
           esenciales como seguros, películas antiasalto y tapetes de uso rudo. Nuestro objetivo es que tomes 
           decisiones informadas y personalizadas para llevarte a casa el auto ideal.</p>
-        <a href="#inicio" class="cta-2">Explorar Modelos</a>
+        <a href="#catalogo-section" class="cta-2">Explorar Modelos</a>
       </div>
-
       <figure class="knowledge__picture">
-        <img src="./public/assets/images/Pc Inside.png" class="knowledge__img">
+        <img src="./public/assets/images/Pc Inside.png" class="knowledge__img" alt="Asesoría AutoElite">
       </figure>
     </div>
   </section>
 
-  <footer class="footer">
+  <!-- ════ FINANCIAMIENTO ════ -->
+  <section class="financing" id="financiamiento-section">
+    <div class="container">
+      <span class="financing__eyebrow">✦ Planes de Financiamiento</span>
+      <h2 class="financing__title">Tu auto, a tu ritmo.</h2>
+      <p class="financing__sub">Aprobación en 24 horas. Tasas fijas garantizadas. Sin letra chica.
+        Encuentra el plan que se adapta a tu bolsillo y llévate tu auto hoy.</p>
+      <div class="financing__grid">
+
+        <div class="financing__card">
+          <div class="financing__icon"><i class="bi bi-rocket-takeoff"></i></div>
+          <p class="financing__plan">Plan Básico</p>
+          <h3 class="financing__card-title">Arranque Fácil</h3>
+          <p class="financing__desc">Ideal para primera compra. Requisitos mínimos, enganche accesible y proceso rápido.</p>
+          <ul class="financing__features">
+            <li><i class="bi bi-check-circle-fill"></i> Enganche desde 15%</li>
+            <li><i class="bi bi-check-circle-fill"></i> Plazos de 12 a 36 meses</li>
+            <li><i class="bi bi-check-circle-fill"></i> Tasa fija garantizada</li>
+            <li><i class="bi bi-check-circle-fill"></i> Sin penalización por pago anticipado</li>
+          </ul>
+          <a href="#contacto-section" class="financing__cta financing__cta--outline">Solicitar Info</a>
+        </div>
+
+        <div class="financing__card financing__card--featured">
+          <div class="financing__icon"><i class="bi bi-star-fill"></i></div>
+          <p class="financing__plan">Plan Plus</p>
+          <h3 class="financing__card-title">AutoElite Plus</h3>
+          <p class="financing__desc">El más solicitado. Mensualidad cómoda + seguro + mantenimiento incluidos el primer año.</p>
+          <ul class="financing__features">
+            <li><i class="bi bi-check-circle-fill"></i> Enganche desde 10%</li>
+            <li><i class="bi bi-check-circle-fill"></i> Plazos de 24 a 60 meses</li>
+            <li><i class="bi bi-check-circle-fill"></i> Seguro de auto incluido el 1er año</li>
+            <li><i class="bi bi-check-circle-fill"></i> Mantenimiento preventivo gratis</li>
+            <li><i class="bi bi-check-circle-fill"></i> Aprobación en 24 horas</li>
+          </ul>
+          <a href="#contacto-section" class="financing__cta">Quiero este plan</a>
+        </div>
+
+        <div class="financing__card">
+          <div class="financing__icon"><i class="bi bi-gem"></i></div>
+          <p class="financing__plan">Plan Sin Buró</p>
+          <h3 class="financing__card-title">Historial Limpio</h3>
+          <p class="financing__desc">Soluciones especiales si tienes historial crediticio complicado. Tu situación no te detiene.</p>
+          <ul class="financing__features">
+            <li><i class="bi bi-check-circle-fill"></i> Sin consulta de buró</li>
+            <li><i class="bi bi-check-circle-fill"></i> Enganche personalizado</li>
+            <li><i class="bi bi-check-circle-fill"></i> Plazos de hasta 72 meses</li>
+            <li><i class="bi bi-check-circle-fill"></i> Asesor dedicado exclusivo</li>
+          </ul>
+          <a href="#contacto-section" class="financing__cta financing__cta--outline">Solicitar Info</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ TESTIMONIOS ════ -->
+  <section class="testimonials" id="testimonios-section">
+    <div class="container">
+      <span class="testimonials__eyebrow">✦ Lo que dicen nuestros clientes</span>
+      <h2 class="testimonials__title">Experiencias reales.</h2>
+      <div class="testimonials__grid">
+
+        <div class="testimonial">
+          <span class="testimonial__quote-icon">"</span>
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__text">El proceso fue increíblemente sencillo. En 3 días ya tenía las llaves de mi CR-V. El asesor fue honesto, paciente y sin presiones. Totalmente recomendados.</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">MC</div>
+            <div>
+              <p class="testimonial__name">María Contreras</p>
+              <p class="testimonial__car">Honda CR-V 2024 Touring</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <span class="testimonial__quote-icon">"</span>
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__text">Tenía deudas en buró y pensé que nunca podría estrenar. AutoElite encontró un plan perfecto para mi situación. Ahora manejo mi Versa y pago cómodamente cada mes.</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">RL</div>
+            <div>
+              <p class="testimonial__name">Roberto López</p>
+              <p class="testimonial__car">Nissan Versa 2024 Advance</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <span class="testimonial__quote-icon">"</span>
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__text">La prueba de manejo del Mustang GT fue una experiencia que no olvidaré. El equipo conoce cada detalle del auto. Salí con las llaves ese mismo día. ¡Increíble!</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">AH</div>
+            <div>
+              <p class="testimonial__name">Andrés Herrera</p>
+              <p class="testimonial__car">Ford Mustang GT V8 2024</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <span class="testimonial__quote-icon">"</span>
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__text">Buscaba una Hilux para mi negocio y AutoElite me ayudó a elegir la versión perfecta. El financiamiento fue más rápido de lo esperaba. Un servicio de primera.</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">JM</div>
+            <div>
+              <p class="testimonial__name">Jorge Mendoza</p>
+              <p class="testimonial__car">Toyota Hilux 2024 SR 4x4</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <span class="testimonial__quote-icon">"</span>
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__text">El Prius superó mis expectativas de rendimiento. El asesor me explicó todo sobre el sistema híbrido sin tecnicismos. Llevo 8 meses y no podría estar más contenta.</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">LP</div>
+            <div>
+              <p class="testimonial__name">Laura Pérez</p>
+              <p class="testimonial__car">Toyota Prius 2024 Híbrido</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <span class="testimonial__quote-icon">"</span>
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__text">El Mazda 3 Signature es simplemente espectacular. AutoElite me consiguió un plan muy competitivo. El trato fue de primera clase desde el primer contacto.</p>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar">CR</div>
+            <div>
+              <p class="testimonial__name">Carlos Ramírez</p>
+              <p class="testimonial__car">Mazda 3 Sedán 2024 Signature</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ FOOTER ════ -->
+  <footer class="footer" id="contacto-section">
     <div class="footer__container">
+
       <div class="footer__section">
-        <h3 class="footer__title"><span style="color: aliceblue !important;">Auto</span>Elite <img src="./public/assets/favicon/AutoElite-favicon.png" class="favicon" alt=""></h3>
+        <h3 class="footer__title">
+          <span style="color: #f5f0e8 !important;">Auto</span>Elite
+          <img src="./public/assets/favicon/AutoElite-favicon.png" class="favicon" alt="">
+        </h3>
         <div class="footer__content">
           <div class="footer__contact">
-            <p><i class="bi bi-telephone"></i><a href="tel:+52 777 439 5441" style="color: inherit; text-decoration: none;">+52 777 439 5441</a></p>
-            <p><i class="bi bi-envelope"></i><a href="mailto:soporte@autoelite.com" style="color: inherit; text-decoration: none;">soporte@autoelite.com</a></p>
+            <p><i class="bi bi-telephone"></i>
+              <a href="tel:+527774395441" style="color:inherit;text-decoration:none;">+52 777 439 5441</a>
+            </p>
+            <p><i class="bi bi-envelope"></i>
+              <a href="mailto:soporte@autoelite.com" style="color:inherit;text-decoration:none;">soporte@autoelite.com</a>
+            </p>
+            <p><i class="bi bi-whatsapp"></i>
+              <a href="https://wa.me/527774395441" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">WhatsApp Directo</a>
+            </p>
+            <p><i class="bi bi-geo-alt"></i> Av. Plan de Ayala 512, Cuernavaca, Morelos</p>
+            <p><i class="bi bi-clock"></i> Lun–Sáb 9:00–20:00 · Dom 10:00–15:00</p>
           </div>
         </div>
       </div>
 
       <div class="footer__section">
-        <h3 class="footer__title">Enlaces</h3>
+        <h3 class="footer__title">Navegación</h3>
         <div class="footer__links">
           <a href="#inicio" class="footer__link"><i class="bi bi-chevron-right"></i> Inicio</a>
+          <a href="#catalogo-section" class="footer__link"><i class="bi bi-chevron-right"></i> Catálogo</a>
+          <a href="#marcas-section" class="footer__link"><i class="bi bi-chevron-right"></i> Marcas</a>
+          <a href="#financiamiento-section" class="footer__link"><i class="bi bi-chevron-right"></i> Financiamiento</a>
+          <a href="#testimonios-section" class="footer__link"><i class="bi bi-chevron-right"></i> Testimonios</a>
         </div>
       </div>
 
       <div class="footer__section">
         <h3 class="footer__title">Catálogo</h3>
         <div class="footer__links">
-          <a href="#" class="footer__link"><i class="bi bi-car-front"></i> Sedanes y Compactos </a>
-          <a href="#" class="footer__link"><i class="bi bi-truck"></i> Pickups y SUVs</a>
-          <a href="#" class="footer__link"><i class="bi bi-tools"></i> Taller y Mantenimiento</a>
+          <a href="https://www.nissan.com.mx/autos/versa.html" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-car-front"></i> Nissan Versa 2024</a>
+          <a href="https://www.honda.com.mx/autos/cr-v.html" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-car-front"></i> Honda CR-V 2024</a>
+          <a href="https://www.ford.com.mx/autos/mustang/" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-car-front"></i> Ford Mustang GT</a>
+          <a href="https://www.toyota.com.mx/hilux" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-truck"></i> Toyota Hilux 2024</a>
+          <a href="https://www.toyota.com.mx/prius" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-ev-front"></i> Toyota Prius 2024</a>
+          <a href="https://www.mazdamexico.com.mx/modelos/sedanes/mazda3-sedan" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-car-front"></i> Mazda 3 Signature</a>
         </div>
       </div>
 
       <div class="footer__section">
         <h3 class="footer__title">Síguenos</h3>
         <div class="footer__social">
-          <a href="https://www.facebook.com/profile.php?id=61568955356110" class="footer__social-icon" aria-label="Facebook">
+          <a href="https://www.facebook.com/profile.php?id=61568955356110" target="_blank" rel="noopener" class="footer__social-icon" aria-label="Facebook">
             <i class="bi bi-facebook"></i>
           </a>
-          <a href="https://github.com/AngelRomero89382/AutoElite" class="footer__social-icon" aria-label="github">
+          <a href="https://github.com/AngelRomero89382/AutoElite" target="_blank" rel="noopener" class="footer__social-icon" aria-label="GitHub">
             <i class="bi bi-github"></i>
           </a>
+          <a href="https://wa.me/527774395441" target="_blank" rel="noopener" class="footer__social-icon" aria-label="WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+        </div>
+        <br>
+        <h3 class="footer__title" style="margin-top:12px;">Recursos</h3>
+        <div class="footer__links">
+          <a href="https://www.profeco.gob.mx" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-chevron-right"></i> PROFECO</a>
+          <a href="https://www.amda.mx" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-chevron-right"></i> AMDA México</a>
+          <a href="https://www.sat.gob.mx" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-chevron-right"></i> SAT — Deducción Auto</a>
         </div>
       </div>
+
     </div>
 
     <div class="footer__bottom">
       <div class="footer__divider"></div>
       <p class="footer__copyright">
-        © <span id="currentYear"></span> AutoElite - Todos los derechos reservados | Diseñado por Angel Jesús Romero
-        Pérez.
+        © <span id="currentYear"></span> AutoElite — Todos los derechos reservados | Diseñado por Angel Jesús Romero Pérez.
       </p>
     </div>
   </footer>
@@ -301,5 +947,4 @@
   <script src="./public/assets/js/bootstrap/bootstrap.bundle.min.js"></script>
 
 </body>
-
 </html>

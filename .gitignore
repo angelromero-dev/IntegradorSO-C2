@@ -1,0 +1,34 @@
+# Archivos de configuración con datos sensibles
+config/conn.php
+config/database.php
+.env
+
+# Carpetas de sistema que no necesitas subir
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Archivos temporales o de cache
+*.log
+*.tmp
+*.temp
+.cache/
+
+# Archivos de dependencias que se pueden reinstalar
+/node_modules/
+/vendor/
+
+# Archivos de respaldo
+*.bak
+*~
+*.swp
+
+# Archivos de configuración local
+local-config.php
+test-config.php
+
+# Carpetas de pruebas o desarrollo
+/test/
+/dev/
+/temp/

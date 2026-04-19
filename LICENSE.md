@@ -6,10 +6,11 @@ Proyecto Final de Sistemas Operativos — Licenciatura en Ingeniería en Sistema
 
 ## Aviso Legal
 
-Este proyecto fue desarrollado íntegramente por Angel Jesús Romero Pérez como trabajo
-final de la materia de Sistemas Operativos, en el marco de un programa de educación superior.
-Todos los derechos del código fuente, diseño visual, estructura y recursos multimedia
-pertenecen a su autor.
+Este proyecto fue desarrollado íntegramente por Angel Jesús Romero Pérez,
+Joshua Alejandro Tabales Ponce, Diego Reyez Picazo, Eveline Sarahi Gutierrez Esquivel y
+Merari Nicole Trujillo Bucio como trabajo final de la materia de Sistemas Operativos, 
+en el marco de un programa de educación superior. Todos los derechos del código fuente, 
+diseño visual, estructura y recursos multimedia pertenecen a sus autores.
 
 ---
 
@@ -58,6 +59,6 @@ del contenido publicado.
 ## Contacto
 
 Para consultas sobre este proyecto o solicitudes de uso:
-**Angel Jesús Romero Pérez**
+**Angel Jesús Romero Pérez - Lider del proyecto**
 https://github.com/angelromero-dev/IntegradorSO-C2.git
 Abril 2026

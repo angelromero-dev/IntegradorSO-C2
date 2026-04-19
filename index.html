@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0d0d0d">
   <title>AutoElite — Agencia Automotriz Premium</title>
-  
+
   <link href="./public/assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
   <link href='./public/assets/icons/bootstrap/bootstrap-icons.min.css' rel='stylesheet'>
   <link href='./public/assets/icons/bootstrap/boxicons.min.css' rel='stylesheet'>
@@ -27,22 +27,22 @@
 
     /* Fuerza variables globales sobre main.css/index.css */
     :root {
-      --gold:        #c9a84c !important;
-      --gold-light:  #e2c47a !important;
-      --gold-dark:   #9e7e35 !important;
-      --black:       #0d0d0d !important;
-      --anthracite:  #1a1a1a !important;
-      --steel:       #2e2e2e !important;
-      --cream:       #f5f0e8 !important;
-      --off-white:   #faf9f7 !important;
-      --silver:      #b0b0b0 !important;
-      --smoke:       #7a7a7a !important;
+      --gold: #c9a84c !important;
+      --gold-light: #e2c47a !important;
+      --gold-dark: #9e7e35 !important;
+      --black: #0d0d0d !important;
+      --anthracite: #1a1a1a !important;
+      --steel: #2e2e2e !important;
+      --cream: #f5f0e8 !important;
+      --off-white: #faf9f7 !important;
+      --silver: #b0b0b0 !important;
+      --smoke: #7a7a7a !important;
 
       /* Sobrescribe variables del main.css */
-      --orange:    #c9a84c !important;
-      --blue:      #1a1a1a !important;
+      --orange: #c9a84c !important;
+      --blue: #1a1a1a !important;
       --turquoise: #2e2e2e !important;
-      --degrade:   linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 60%, #2e2e2e 100%) !important;
+      --degrade: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 60%, #2e2e2e 100%) !important;
       --color-title: #0d0d0d !important;
     }
 
@@ -51,31 +51,53 @@
     .navbar-dark,
     .bg-primary {
       background: linear-gradient(90deg, #0d0d0d 0%, #1a1a1a 50%, #0d0d0d 100%) !important;
-      border-bottom: 1px solid rgba(201,168,76,0.25) !important;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.6) !important;
+      border-bottom: 1px solid rgba(201, 168, 76, 0.25) !important;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.6) !important;
     }
-    .navbar-brand { color: #f5f0e8 !important; letter-spacing: 0.06em; }
-    .title-main-1 { color: #c9a84c !important; }
-    .nav-link { color: rgba(245,240,232,0.85) !important; letter-spacing: 0.06em; font-size: 0.8rem; }
-    .nav-link:hover, .nav-link.active { color: #c9a84c !important; }
+
+    .navbar-brand {
+      color: #f5f0e8 !important;
+      letter-spacing: 0.06em;
+    }
+
+    .title-main-1 {
+      color: #c9a84c !important;
+    }
+
+    .nav-link {
+      color: rgba(245, 240, 232, 0.85) !important;
+      letter-spacing: 0.06em;
+      font-size: 0.8rem;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #c9a84c !important;
+    }
 
     /* ── Hero override ───────────────────────────────── */
-.hero::before {
-  background-image:
-    linear-gradient(180deg, rgba(13,13,13,0.70) 0%, rgba(13,13,13,0.70) 100%) !important;
-}
+    .hero::before {
+      background-image:
+        linear-gradient(180deg, rgba(13, 13, 13, 0.70) 0%, rgba(13, 13, 13, 0.70) 100%) !important;
+    }
 
 
-.hero__video-bg {
-  position: absolute;
-  inset: 0;
-  z-index: -2;     
-  pointer-events: none;
-  overflow: hidden;
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
-}
-    .hero_title { color: #f5f0e8 !important; }
-    .hero_pg    { color: rgba(245,240,232,0.80) !important; }
+    .hero__video-bg {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+      overflow: hidden;
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+    }
+
+    .hero_title {
+      color: #f5f0e8 !important;
+    }
+
+    .hero_pg {
+      color: rgba(245, 240, 232, 0.80) !important;
+    }
 
     /* ── STATS BAR ─────────────────────────────────── */
     .stats-bar {
@@ -86,10 +108,15 @@
       gap: 12px;
       padding: 28px 40px;
       background: linear-gradient(90deg, #0d0d0d 0%, #1a1a1a 50%, #0d0d0d 100%);
-      border-top: 1px solid rgba(201,168,76,0.3);
-      border-bottom: 1px solid rgba(201,168,76,0.3);
+      border-top: 1px solid rgba(201, 168, 76, 0.3);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.3);
     }
-    .stats-bar__item { text-align: center; color: #f5f0e8; }
+
+    .stats-bar__item {
+      text-align: center;
+      color: #f5f0e8;
+    }
+
     .stats-bar__num {
       display: block;
       font-size: 2rem;
@@ -98,76 +125,133 @@
       letter-spacing: -0.02em;
       color: #c9a84c;
     }
+
     .stats-bar__label {
       display: block;
       font-size: 0.68rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: rgba(245,240,232,0.6);
+      color: rgba(245, 240, 232, 0.6);
       margin-top: 5px;
     }
+
     .stats-bar__divider {
-      width: 1px; height: 44px;
-      background: rgba(201,168,76,0.2);
+      width: 1px;
+      height: 44px;
+      background: rgba(201, 168, 76, 0.2);
     }
-    @media (max-width: 600px) { .stats-bar__divider { display: none; } }
+
+    @media (max-width: 600px) {
+      .stats-bar__divider {
+        display: none;
+      }
+    }
 
     /* ── OBJECT / SLIDER override ────────────────────── */
-    .object { background: #f5f0e8 !important; }
+    .object {
+      background: #f5f0e8 !important;
+    }
+
     .object__course {
       background: #1a1a1a !important;
       color: #c9a84c !important;
     }
-    .subtitle { color: #1a1a1a !important; }
-    .object__arrow { filter: brightness(0) saturate(100%) invert(75%) sepia(30%) saturate(500%) hue-rotate(5deg); }
+
+    .subtitle {
+      color: #1a1a1a !important;
+    }
+
+    .object__arrow {
+      filter: brightness(0) saturate(100%) invert(75%) sepia(30%) saturate(500%) hue-rotate(5deg);
+    }
 
     .object__badge {
       display: inline-block;
       background: #c9a84c;
       color: #0d0d0d;
-      font-size: 0.62rem; font-weight: 800;
-      letter-spacing: 0.18em; text-transform: uppercase;
-      padding: 4px 14px; border-radius: 20px;
+      font-size: 0.62rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 20px;
       margin-bottom: 10px;
     }
+
     .object__link-oficial {
-      display: inline-flex; align-items: center; gap: 6px;
-      margin-top: 14px; padding: 10px 22px; border-radius: 6px;
-      background: #0d0d0d; color: #c9a84c;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 14px;
+      padding: 10px 22px;
+      border-radius: 6px;
+      background: #0d0d0d;
+      color: #c9a84c;
       border: 1.5px solid #c9a84c;
-      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
-      text-decoration: none; transition: background .2s, color .2s, transform .2s;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background .2s, color .2s, transform .2s;
     }
+
     .object__link-oficial:hover {
-      background: #c9a84c; color: #0d0d0d;
-      text-decoration: none; transform: translateY(-2px);
+      background: #c9a84c;
+      color: #0d0d0d;
+      text-decoration: none;
+      transform: translateY(-2px);
     }
-    .object__link-oficial i { font-size: 0.9rem; }
+
+    .object__link-oficial i {
+      font-size: 0.9rem;
+    }
+
     .object__link-cotizar {
-      display: inline-flex; align-items: center; gap: 6px;
-      margin-top: 10px; margin-left: 10px; padding: 10px 22px; border-radius: 6px;
-      background: transparent; color: #2e2e2e;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 10px;
+      margin-left: 10px;
+      padding: 10px 22px;
+      border-radius: 6px;
+      background: transparent;
+      color: #2e2e2e;
       border: 1.5px solid #2e2e2e;
-      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
-      text-decoration: none; transition: background .2s, color .2s, transform .2s;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background .2s, color .2s, transform .2s;
     }
+
     .object__link-cotizar:hover {
-      background: #1a1a1a; color: #c9a84c;
+      background: #1a1a1a;
+      color: #c9a84c;
       border-color: #1a1a1a;
-      text-decoration: none; transform: translateY(-2px);
+      text-decoration: none;
+      transform: translateY(-2px);
     }
 
     /* ── KNOWLEDGE section override ──────────────────── */
     .knowledge {
       background-color: #1a1a1a !important;
       background-image:
-        radial-gradient(rgba(201,168,76,0.12) 0.5px, transparent 0.5px),
-        radial-gradient(rgba(201,168,76,0.12) 0.5px, #1a1a1a 0.5px) !important;
+        radial-gradient(rgba(201, 168, 76, 0.12) 0.5px, transparent 0.5px),
+        radial-gradient(rgba(201, 168, 76, 0.12) 0.5px, #1a1a1a 0.5px) !important;
       background-size: 20px 20px !important;
       background-position: 0 0, 10px 10px !important;
     }
-    .knowledge .subtitle { color: #f5f0e8 !important; }
-    .knowledge__paragraph { color: rgba(245,240,232,0.75) !important; }
+
+    .knowledge .subtitle {
+      color: #f5f0e8 !important;
+    }
+
+    .knowledge__paragraph {
+      color: rgba(245, 240, 232, 0.75) !important;
+    }
+
     .cta-2 {
       background: #c9a84c !important;
       color: #0d0d0d !important;
@@ -176,6 +260,7 @@
       letter-spacing: 0.1em !important;
       transition: background .2s, transform .2s !important;
     }
+
     .cta-2:hover {
       background: #e2c47a !important;
       color: #0d0d0d !important;
@@ -183,437 +268,720 @@
     }
 
     /* ── MARCAS ─────────────────────────────────────── */
-    .brands { padding: 72px 0 60px; background: #faf9f7; }
+    .brands {
+      padding: 72px 0 60px;
+      background: #faf9f7;
+    }
+
     .brands__eyebrow {
-      display: block; text-align: center;
-      font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
-      color: #9e7e35; margin-bottom: 6px; font-weight: 700;
+      display: block;
+      text-align: center;
+      font-size: 0.7rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #9e7e35;
+      margin-bottom: 6px;
+      font-weight: 700;
     }
+
     .brands__title {
-      text-align: center; font-size: 1.75rem; font-weight: 700;
-      color: #0d0d0d; margin-bottom: 48px;
+      text-align: center;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #0d0d0d;
+      margin-bottom: 48px;
     }
-    .brands__title span { color: #c9a84c; }
+
+    .brands__title span {
+      color: #c9a84c;
+    }
+
     .brands__grid {
-      display: flex; flex-wrap: wrap; justify-content: center;
-      gap: 16px; padding: 0 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      padding: 0 40px;
     }
+
     .brands__card {
-      display: flex; flex-direction: column; align-items: center; gap: 10px;
-      padding: 24px 20px; min-width: 140px;
-      background: #fff; border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 24px 20px;
+      min-width: 140px;
+      background: #fff;
+      border-radius: 10px;
       border: 1.5px solid #e0d9ce;
-      text-decoration: none; color: #5a5a5a;
-      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+      text-decoration: none;
+      color: #5a5a5a;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
       transition: border-color .25s, box-shadow .25s, transform .25s, color .25s;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     }
+
     .brands__card:hover {
       border-color: #c9a84c;
-      box-shadow: 0 6px 24px rgba(201,168,76,0.15);
+      box-shadow: 0 6px 24px rgba(201, 168, 76, 0.15);
       transform: translateY(-4px);
       color: #9e7e35;
       text-decoration: none;
     }
-    .brands__card i { font-size: 2.2rem; color: #1a1a1a; transition: color .25s; }
-    .brands__card:hover i { color: #c9a84c; }
-    .brands__note {
-      text-align: center; margin-top: 32px;
-      font-size: 0.78rem; color: #7a7a7a;
+
+    .brands__card i {
+      font-size: 2.2rem;
+      color: #1a1a1a;
+      transition: color .25s;
     }
-    .brands__note a { color: #9e7e35; text-decoration: none; font-weight: 700; }
-    .brands__note a:hover { color: #c9a84c; text-decoration: underline; }
+
+    .brands__card:hover i {
+      color: #c9a84c;
+    }
+
+    .brands__note {
+      text-align: center;
+      margin-top: 32px;
+      font-size: 0.78rem;
+      color: #7a7a7a;
+    }
+
+    .brands__note a {
+      color: #9e7e35;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .brands__note a:hover {
+      color: #c9a84c;
+      text-decoration: underline;
+    }
 
     /* ── FINANCIAMIENTO ─────────────────────────────── */
-    .financing { padding: 72px 0 60px; background: #0d0d0d; }
+    .financing {
+      padding: 72px 0 60px;
+      background: #0d0d0d;
+    }
+
     .financing__eyebrow {
-      display: block; text-align: center;
-      font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
-      color: #c9a84c; margin-bottom: 6px; font-weight: 700;
+      display: block;
+      text-align: center;
+      font-size: 0.7rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #c9a84c;
+      margin-bottom: 6px;
+      font-weight: 700;
     }
+
     .financing__title {
-      text-align: center; font-size: 1.75rem; font-weight: 700;
-      color: #f5f0e8; margin-bottom: 12px;
+      text-align: center;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #f5f0e8;
+      margin-bottom: 12px;
     }
+
     .financing__sub {
-      text-align: center; color: #b0b0b0; font-size: 0.88rem;
-      max-width: 560px; margin: 0 auto 48px; line-height: 1.7;
+      text-align: center;
+      color: #b0b0b0;
+      font-size: 0.88rem;
+      max-width: 560px;
+      margin: 0 auto 48px;
+      line-height: 1.7;
     }
+
     .financing__grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px; padding: 0 40px;
+      gap: 24px;
+      padding: 0 40px;
     }
+
     .financing__card {
-      border-radius: 12px; padding: 32px 28px;
-      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 12px;
+      padding: 32px 28px;
+      border: 1px solid rgba(201, 168, 76, 0.15);
       background: #1a1a1a;
       transition: border-color .25s, box-shadow .25s, transform .25s;
-      position: relative; overflow: hidden;
+      position: relative;
+      overflow: hidden;
     }
+
     .financing__card:hover {
-      border-color: rgba(201,168,76,0.5);
-      box-shadow: 0 8px 32px rgba(201,168,76,0.08);
+      border-color: rgba(201, 168, 76, 0.5);
+      box-shadow: 0 8px 32px rgba(201, 168, 76, 0.08);
       transform: translateY(-4px);
     }
+
     .financing__card--featured {
       border-color: #c9a84c;
       background: linear-gradient(145deg, #1e1a0f 0%, #1a1a1a 100%);
     }
+
     .financing__card--featured::before {
       content: 'MAS POPULAR';
-      position: absolute; top: 0; right: 0;
-      background: #c9a84c; color: #0d0d0d;
-      font-size: 0.55rem; font-weight: 900; letter-spacing: 0.22em;
-      padding: 5px 14px; border-radius: 0 0 0 10px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: #c9a84c;
+      color: #0d0d0d;
+      font-size: 0.55rem;
+      font-weight: 900;
+      letter-spacing: 0.22em;
+      padding: 5px 14px;
+      border-radius: 0 0 0 10px;
     }
-    .financing__icon { font-size: 2rem; margin-bottom: 16px; color: #c9a84c; }
-    .financing__plan {
-      font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase;
-      color: #9e7e35; font-weight: 700; margin-bottom: 6px;
-    }
-    .financing__card-title {
-      font-size: 1.25rem; font-weight: 700; color: #f5f0e8; margin-bottom: 10px;
-    }
-    .financing__desc {
-      font-size: 0.8rem; color: #b0b0b0; line-height: 1.7; margin-bottom: 20px;
-    }
-    .financing__features {
-      list-style: none; padding: 0; margin: 0 0 24px;
-      display: flex; flex-direction: column; gap: 9px;
-    }
-    .financing__features li {
-      font-size: 0.8rem; display: flex; align-items: center; gap: 9px; color: #d4cfc7;
-    }
-    .financing__features li i { color: #c9a84c; font-size: 0.9rem; }
-    .financing__cta {
-      display: block; text-align: center;
-      padding: 12px 20px; border-radius: 6px;
-      background: #c9a84c; color: #0d0d0d;
-      font-size: 0.75rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;
-      text-decoration: none; border: none; cursor: pointer;
-      transition: background .25s, transform .2s;
-    }
-    .financing__cta:hover {
-      background: #e2c47a; color: #0d0d0d;
-      transform: translateY(-1px); text-decoration: none;
-    }
-    .financing__cta--outline {
-      background: transparent;
-      border: 1.5px solid rgba(201,168,76,0.5);
+
+    .financing__icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
       color: #c9a84c;
     }
+
+    .financing__plan {
+      font-size: 0.62rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #9e7e35;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .financing__card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #f5f0e8;
+      margin-bottom: 10px;
+    }
+
+    .financing__desc {
+      font-size: 0.8rem;
+      color: #b0b0b0;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .financing__features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .financing__features li {
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: #d4cfc7;
+    }
+
+    .financing__features li i {
+      color: #c9a84c;
+      font-size: 0.9rem;
+    }
+
+    .financing__cta {
+      display: block;
+      text-align: center;
+      padding: 12px 20px;
+      border-radius: 6px;
+      background: #c9a84c;
+      color: #0d0d0d;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background .25s, transform .2s;
+    }
+
+    .financing__cta:hover {
+      background: #e2c47a;
+      color: #0d0d0d;
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+
+    .financing__cta--outline {
+      background: transparent;
+      border: 1.5px solid rgba(201, 168, 76, 0.5);
+      color: #c9a84c;
+    }
+
     .financing__cta--outline:hover {
-      background: #c9a84c; color: #0d0d0d;
+      background: #c9a84c;
+      color: #0d0d0d;
       border-color: #c9a84c;
     }
 
     /* ── TESTIMONIOS ────────────────────────────────── */
-    .testimonials { padding: 72px 0 60px; background: #faf9f7; }
+    .testimonials {
+      padding: 72px 0 60px;
+      background: #faf9f7;
+    }
+
     .testimonials__eyebrow {
-      display: block; text-align: center;
-      font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase;
-      color: #9e7e35; margin-bottom: 6px; font-weight: 700;
+      display: block;
+      text-align: center;
+      font-size: 0.7rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #9e7e35;
+      margin-bottom: 6px;
+      font-weight: 700;
     }
+
     .testimonials__title {
-      text-align: center; font-size: 1.75rem; font-weight: 700;
-      color: #0d0d0d; margin-bottom: 48px;
+      text-align: center;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #0d0d0d;
+      margin-bottom: 48px;
     }
+
     .testimonials__grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px; padding: 0 40px;
+      gap: 24px;
+      padding: 0 40px;
     }
+
     .testimonial {
-      background: #fff; border-radius: 12px; padding: 32px 28px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 32px 28px;
       border: 1px solid #e0d9ce;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
       transition: box-shadow .25s, transform .25s;
       position: relative;
     }
+
     .testimonial:hover {
-      box-shadow: 0 8px 32px rgba(0,0,0,0.09);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.09);
       transform: translateY(-4px);
-      border-color: rgba(201,168,76,0.4);
+      border-color: rgba(201, 168, 76, 0.4);
     }
+
     .testimonial__quote-icon {
-      font-size: 3.5rem; line-height: 1; color: rgba(201,168,76,0.15);
-      font-family: Georgia, serif; position: absolute; top: 18px; right: 22px;
+      font-size: 3.5rem;
+      line-height: 1;
+      color: rgba(201, 168, 76, 0.15);
+      font-family: Georgia, serif;
+      position: absolute;
+      top: 18px;
+      right: 22px;
     }
-    .testimonial__stars { color: #c9a84c; font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 14px; }
+
+    .testimonial__stars {
+      color: #c9a84c;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+    }
+
     .testimonial__text {
-      font-size: 0.88rem; color: #4a4a4a; line-height: 1.78;
-      font-style: italic; margin-bottom: 22px;
+      font-size: 0.88rem;
+      color: #4a4a4a;
+      line-height: 1.78;
+      font-style: italic;
+      margin-bottom: 22px;
     }
-    .testimonial__author { display: flex; align-items: center; gap: 12px; }
+
+    .testimonial__author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
     .testimonial__avatar {
-      width: 44px; height: 44px; border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
       background: linear-gradient(135deg, #1a1a1a, #2e2e2e);
       border: 2px solid #c9a84c;
-      display: flex; align-items: center; justify-content: center;
-      color: #c9a84c; font-weight: 800; font-size: 0.9rem; flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #c9a84c;
+      font-weight: 800;
+      font-size: 0.9rem;
+      flex-shrink: 0;
     }
-    .testimonial__name { font-size: 0.85rem; font-weight: 700; color: #0d0d0d; }
-    .testimonial__car { font-size: 0.7rem; color: #9e7e35; font-weight: 600; letter-spacing: 0.06em; }
+
+    .testimonial__name {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #0d0d0d;
+    }
+
+    .testimonial__car {
+      font-size: 0.7rem;
+      color: #9e7e35;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+    }
 
     /* ── HERO tag ────────────────────────────────────── */
     .hero_subtitle_tag {
       display: inline-block;
-      background: rgba(201,168,76,0.12);
-      border: 1px solid rgba(201,168,76,0.35);
-      color: #e2c47a; font-size: 0.7rem; font-weight: 600;
-      letter-spacing: 0.22em; text-transform: uppercase;
-      padding: 6px 18px; border-radius: 20px;
-      margin-bottom: 18px; backdrop-filter: blur(4px);
+      background: rgba(201, 168, 76, 0.12);
+      border: 1px solid rgba(201, 168, 76, 0.35);
+      color: #e2c47a;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+      backdrop-filter: blur(4px);
     }
 
     /* ── Footer override ─────────────────────────────── */
     .footer {
       background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 60%, #0d0d0d 100%) !important;
-      border-top: 1px solid rgba(201,168,76,0.2) !important;
+      border-top: 1px solid rgba(201, 168, 76, 0.2) !important;
     }
-    .footer__title { color: #c9a84c !important; }
-    .footer__title::after { background: #c9a84c !important; }
-    .footer__social-icon:hover { color: #c9a84c !important; }
-    .footer__link:hover { color: #c9a84c !important; }
-    .footer__contact i { color: #c9a84c !important; }
+
+    .footer__title {
+      color: #c9a84c !important;
+    }
+
+    .footer__title::after {
+      background: #c9a84c !important;
+    }
+
+    .footer__social-icon:hover {
+      color: #c9a84c !important;
+    }
+
+    .footer__link:hover {
+      color: #c9a84c !important;
+    }
+
+    .footer__contact i {
+      color: #c9a84c !important;
+    }
 
     /* ── Bootstrap badge/button global purge ─────────── */
-    .navbar-toggler { border-color: rgba(201,168,76,0.4) !important; }
+    .navbar-toggler {
+      border-color: rgba(201, 168, 76, 0.4) !important;
+    }
+
     .navbar-toggler-icon {
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(201,168,76,0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
     }
 
     @media (max-width: 768px) {
-      .brands__grid, .financing__grid, .testimonials__grid { padding: 0 16px; }
-      .brands__card { min-width: 110px; padding: 18px 12px; }
-      .financing__card, .testimonial { padding: 24px 20px; }
+
+      .brands__grid,
+      .financing__grid,
+      .testimonials__grid {
+        padding: 0 16px;
+      }
+
+      .brands__card {
+        min-width: 110px;
+        padding: 18px 12px;
+      }
+
+      .financing__card,
+      .testimonial {
+        padding: 24px 20px;
+      }
     }
 
 
     /* ── SLIDER IMAGE — sin recorte ──────────────────── */
-.object__picture {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 560px;
-  min-height: 340px;
-  max-height: 420px;
-  background: transparent;
-  flex-shrink: 0;
-}
+    .object__picture {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 560px;
+      min-height: 340px;
+      max-height: 420px;
+      background: transparent;
+      flex-shrink: 0;
+    }
 
-.object__img {
-  width: 100%;
-  height: 100%;
-  max-height: 420px;
-  object-fit: contain !important;  
-  object-position: center;
-  display: block;
-}
-
-
-@media (max-width: 768px) {
-  .object__picture {
-    max-width: 100%;
-    min-height: 220px;
-    max-height: 280px;
-  }
-  .object__img {
-    max-height: 280px;
-  }
-}
-
-/* ══ EXPERIENCIA ELITE ══════════════════════════════ */
-.elite-xp {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  text-align: center;
-}
-
-/* Video fondo */
-.elite-xp__video-bg {
-  position: absolute;
-  top: -15%;
-  left: 0;
-  width: 100%;
-  height: 130%;        
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
-  will-change: transform;
-}
-/* Overlay con degradado dorado-negro */
-.elite-xp__overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background:
-    linear-gradient(180deg,
-      rgba(13,13,13,0.55) 0%,
-      rgba(13,13,13,0.72) 40%,
-      rgba(13,13,13,0.88) 100%),
-    radial-gradient(ellipse at center bottom,
-      rgba(201,168,76,0.18) 0%,
-      transparent 70%);
-}
-
-/* Contenido */
-.elite-xp__content {
-  position: relative;
-  z-index: 2;
-  padding: 120px 20px 100px;
-  max-width: 820px;
-}
-
-.elite-xp__eyebrow {
-  display: inline-block;
-  font-size: 0.7rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: #c9a84c;
-  font-weight: 700;
-  margin-bottom: 18px;
-}
-
-.elite-xp__title {
-  font-size: clamp(2.2rem, 5vw, 3.6rem);
-  font-weight: 800;
-  color: #f5f0e8;
-  line-height: 1.15;
-  margin-bottom: 22px;
-  letter-spacing: -0.02em;
-}
-.elite-xp__title span {
-  color: #c9a84c;
-}
-
-.elite-xp__desc {
-  font-size: 1rem;
-  color: rgba(245,240,232,0.78);
-  line-height: 1.8;
-  max-width: 600px;
-  margin: 0 auto 40px;
-}
-
-/* Pills */
-.elite-xp__pills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 14px;
-  margin-bottom: 44px;
-}
-.elite-xp__pill {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 22px;
-  border-radius: 40px;
-  background: rgba(201,168,76,0.10);
-  border: 1px solid rgba(201,168,76,0.35);
-  color: #e2c47a;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  backdrop-filter: blur(6px);
-  transition: background .25s, transform .25s;
-}
-.elite-xp__pill:hover {
-  background: rgba(201,168,76,0.22);
-  transform: translateY(-3px);
-}
-.elite-xp__pill i {
-  font-size: 1rem;
-  color: #c9a84c;
-}
-
-/* CTAs */
-.elite-xp__ctas {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 14px;
-}
-.elite-xp__cta-primary {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 14px 34px; border-radius: 6px;
-  background: #c9a84c; color: #0d0d0d;
-  font-size: 0.8rem; font-weight: 800;
-  letter-spacing: 0.14em; text-transform: uppercase;
-  text-decoration: none;
-  transition: background .25s, transform .2s, box-shadow .25s;
-  box-shadow: 0 4px 20px rgba(201,168,76,0.35);
-}
-.elite-xp__cta-primary:hover {
-  background: #e2c47a; color: #0d0d0d;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(201,168,76,0.45);
-  text-decoration: none;
-}
-.elite-xp__cta-secondary {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 14px 34px; border-radius: 6px;
-  background: transparent; color: #f5f0e8;
-  border: 1.5px solid rgba(245,240,232,0.45);
-  font-size: 0.8rem; font-weight: 700;
-  letter-spacing: 0.14em; text-transform: uppercase;
-  text-decoration: none;
-  transition: border-color .25s, background .25s, transform .2s;
-}
-.elite-xp__cta-secondary:hover {
-  border-color: #c9a84c; color: #c9a84c;
-  background: rgba(201,168,76,0.08);
-  transform: translateY(-3px);
-  text-decoration: none;
-}
-
-/* Scroll hint animado */
-.elite-xp__scroll-hint {
-  position: absolute;
-  bottom: 28px; left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  color: rgba(201,168,76,0.7);
-  font-size: 1.4rem;
-  animation: bounceDown 1.8s ease-in-out infinite;
-}
-@keyframes bounceDown {
-  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.7; }
-  50%       { transform: translateX(-50%) translateY(10px); opacity: 1; }
-}
-
-/* ── ANIMACIONES DE SCROLL (reveal) ─────────────── */
-.reveal-up {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.75s ease, transform 0.75s ease;
-}
-.reveal-up.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-/* Delay en cadena para cada hijo */
-.elite-xp__content .reveal-up:nth-child(1) { transition-delay: 0s;    }
-.elite-xp__content .reveal-up:nth-child(2) { transition-delay: 0.15s; }
-.elite-xp__content .reveal-up:nth-child(3) { transition-delay: 0.28s; }
-.elite-xp__content .reveal-up:nth-child(4) { transition-delay: 0.42s; }
-.elite-xp__content .reveal-up:nth-child(5) { transition-delay: 0.56s; }
-
-@media (max-width: 600px) {
-  .elite-xp__title { font-size: 2rem; }
-  .elite-xp__pill  { padding: 8px 16px; font-size: 0.72rem; }
-  .elite-xp__cta-primary,
-  .elite-xp__cta-secondary { width: 100%; justify-content: center; }
-}
+    .object__img {
+      width: 100%;
+      height: 100%;
+      max-height: 420px;
+      object-fit: contain !important;
+      object-position: center;
+      display: block;
+    }
 
 
+    @media (max-width: 768px) {
+      .object__picture {
+        max-width: 100%;
+        min-height: 220px;
+        max-height: 280px;
+      }
 
+      .object__img {
+        max-height: 280px;
+      }
+    }
+
+    /* ══ EXPERIENCIA ELITE ══════════════════════════════ */
+    .elite-xp {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    /* Video fondo */
+    .elite-xp__video-bg {
+      position: absolute;
+      top: -15%;
+      left: 0;
+      width: 100%;
+      height: 130%;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+      will-change: transform;
+    }
+
+    /* Overlay con degradado dorado-negro */
+    .elite-xp__overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(180deg,
+          rgba(13, 13, 13, 0.55) 0%,
+          rgba(13, 13, 13, 0.72) 40%,
+          rgba(13, 13, 13, 0.88) 100%),
+        radial-gradient(ellipse at center bottom,
+          rgba(201, 168, 76, 0.18) 0%,
+          transparent 70%);
+    }
+
+    /* Contenido */
+    .elite-xp__content {
+      position: relative;
+      z-index: 2;
+      padding: 120px 20px 100px;
+      max-width: 820px;
+    }
+
+    .elite-xp__eyebrow {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #c9a84c;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .elite-xp__title {
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 800;
+      color: #f5f0e8;
+      line-height: 1.15;
+      margin-bottom: 22px;
+      letter-spacing: -0.02em;
+    }
+
+    .elite-xp__title span {
+      color: #c9a84c;
+    }
+
+    .elite-xp__desc {
+      font-size: 1rem;
+      color: rgba(245, 240, 232, 0.78);
+      line-height: 1.8;
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+
+    /* Pills */
+    .elite-xp__pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 44px;
+    }
+
+    .elite-xp__pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border-radius: 40px;
+      background: rgba(201, 168, 76, 0.10);
+      border: 1px solid rgba(201, 168, 76, 0.35);
+      color: #e2c47a;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      backdrop-filter: blur(6px);
+      transition: background .25s, transform .25s;
+    }
+
+    .elite-xp__pill:hover {
+      background: rgba(201, 168, 76, 0.22);
+      transform: translateY(-3px);
+    }
+
+    .elite-xp__pill i {
+      font-size: 1rem;
+      color: #c9a84c;
+    }
+
+    /* CTAs */
+    .elite-xp__ctas {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .elite-xp__cta-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 34px;
+      border-radius: 6px;
+      background: #c9a84c;
+      color: #0d0d0d;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background .25s, transform .2s, box-shadow .25s;
+      box-shadow: 0 4px 20px rgba(201, 168, 76, 0.35);
+    }
+
+    .elite-xp__cta-primary:hover {
+      background: #e2c47a;
+      color: #0d0d0d;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(201, 168, 76, 0.45);
+      text-decoration: none;
+    }
+
+    .elite-xp__cta-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 34px;
+      border-radius: 6px;
+      background: transparent;
+      color: #f5f0e8;
+      border: 1.5px solid rgba(245, 240, 232, 0.45);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: border-color .25s, background .25s, transform .2s;
+    }
+
+    .elite-xp__cta-secondary:hover {
+      border-color: #c9a84c;
+      color: #c9a84c;
+      background: rgba(201, 168, 76, 0.08);
+      transform: translateY(-3px);
+      text-decoration: none;
+    }
+
+    /* Scroll hint animado */
+    .elite-xp__scroll-hint {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      color: rgba(201, 168, 76, 0.7);
+      font-size: 1.4rem;
+      animation: bounceDown 1.8s ease-in-out infinite;
+    }
+
+    @keyframes bounceDown {
+
+      0%,
+      100% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 0.7;
+      }
+
+      50% {
+        transform: translateX(-50%) translateY(10px);
+        opacity: 1;
+      }
+    }
+
+    /* ── ANIMACIONES DE SCROLL (reveal) ─────────────── */
+    .reveal-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+
+    .reveal-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Delay en cadena para cada hijo */
+    .elite-xp__content .reveal-up:nth-child(1) {
+      transition-delay: 0s;
+    }
+
+    .elite-xp__content .reveal-up:nth-child(2) {
+      transition-delay: 0.15s;
+    }
+
+    .elite-xp__content .reveal-up:nth-child(3) {
+      transition-delay: 0.28s;
+    }
+
+    .elite-xp__content .reveal-up:nth-child(4) {
+      transition-delay: 0.42s;
+    }
+
+    .elite-xp__content .reveal-up:nth-child(5) {
+      transition-delay: 0.56s;
+    }
+
+    @media (max-width: 600px) {
+      .elite-xp__title {
+        font-size: 2rem;
+      }
+
+      .elite-xp__pill {
+        padding: 8px 16px;
+        font-size: 0.72rem;
+      }
+
+      .elite-xp__cta-primary,
+      .elite-xp__cta-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+    }
   </style>
 </head>
 
@@ -626,8 +994,8 @@
         <span class="title-main-1">A</span>uto<span class="title-main-1">E</span>lite
         <img src="./public/assets/favicon/AutoElite-favicon.svg" class="favicon" alt="">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -653,14 +1021,12 @@
   </nav>
 
   <!-- ════ HERO ════ -->
-<header class="hero" id="inicio">
+  <header class="hero" id="inicio">
 
-  <div class="hero__video-bg">
-    <iframe
-      src="https://www.youtube-nocookie.com/embed/t9-cMiEDNyk?autoplay=1&mute=1&loop=1&playlist=t9-cMiEDNyk&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1"
-      allow="autoplay; encrypted-media"
-      allowfullscreen
-      style="
+    <div class="hero__video-bg">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/t9-cMiEDNyk?autoplay=1&mute=1&loop=1&playlist=t9-cMiEDNyk&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1"
+        allow="autoplay; encrypted-media" allowfullscreen style="
         position:absolute;
         top:50%; left:50%;
         transform:translate(-50%,-50%);
@@ -670,24 +1036,23 @@
         min-height:100%;
         border:none;
         pointer-events:none;
-      "
-    ></iframe>
-  </div>
+      "></iframe>
+    </div>
 
-  <section class="hero__container container">
-    <span class="hero_subtitle_tag">✦ Agencia Automotriz Premium — Cuernavaca, Morelos</span>
-    <h1 class="hero_title">Encuentra el vehículo ideal:<br>Sedanes, SUVs &amp; Más</h1>
-    <p class="hero_pg">
-      ¡Aquí descubrirás las mejores opciones automotrices, desde autos compactos hasta pickups de trabajo pesado!
-      Asesoría personalizada, financiamiento flexible y posventa de clase mundial.
-    </p>
-    <p>
-      <i class="bi bi-car-front-fill" style="font-size:75px !important; color:#f5f0e8;"></i>
-      <i class="bi bi-ev-front-fill" style="font-size:75px !important; color:#c9a84c;"></i>
-    </p>
-  </section>
+    <section class="hero__container container">
+      <span class="hero_subtitle_tag">✦ Agencia Automotriz Premium — Cuernavaca, Morelos</span>
+      <h1 class="hero_title">Encuentra el vehículo ideal:<br>Sedanes, SUVs &amp; Más</h1>
+      <p class="hero_pg">
+        ¡Aquí descubrirás las mejores opciones automotrices, desde autos compactos hasta pickups de trabajo pesado!
+        Asesoría personalizada, financiamiento flexible y posventa de clase mundial.
+      </p>
+      <p>
+        <i class="bi bi-car-front-fill" style="font-size:75px !important; color:#f5f0e8;"></i>
+        <i class="bi bi-ev-front-fill" style="font-size:75px !important; color:#c9a84c;"></i>
+      </p>
+    </section>
 
-</header>
+  </header>
 
   <!-- ════ STATS BAR ════ -->
   <div class="stats-bar">
@@ -750,14 +1115,16 @@
           </div>
         </div>
         <figure class="object__picture">
-          <img src="./public/assets/images/Nissan Versa 2024 Advance CVT.webp" class="object__img" alt="Nissan Versa 2024">
+          <img src="./public/assets/images/Nissan Versa 2024 Advance CVT.webp" class="object__img"
+            alt="Nissan Versa 2024">
         </figure>
       </section>
 
       <!-- 2 · Honda CR-V -->
       <section class="object__body" data-id="2">
         <div class="object__texts">
-          <span class="object__badge" style="background:#9e7e35; color:#faf9f7;"><i class="bi bi-people-fill"></i> Ideal Familiar</span>
+          <span class="object__badge" style="background:#9e7e35; color:#faf9f7;"><i class="bi bi-people-fill"></i> Ideal
+            Familiar</span>
           <h2 class="subtitle">Honda CR-V 2024 Touring 1.5L Turbo, Asientos de Piel, Quemacocos eléctrico,
             <span class="object__course">¡SUV versátil, espaciosa y muy cómoda para familias y viajes largos!</span>
           </h2>
@@ -769,7 +1136,8 @@
             <p><strong>Climatización:</strong> A/C automático de doble zona</p>
             <p>Rines de aluminio 18" · Tracción FWD · Excelente valor de reventa en el mercado</p>
             <div>
-              <a href="https://www.honda.com.mx/autos/cr-v.html" target="_blank" rel="noopener" class="object__link-oficial" style="background:#0d0d0d; border-color:#9e7e35; color:#9e7e35;">
+              <a href="https://www.honda.com.mx/autos/cr-v.html" target="_blank" rel="noopener"
+                class="object__link-oficial" style="background:#0d0d0d; border-color:#9e7e35; color:#9e7e35;">
                 <i class="bi bi-box-arrow-up-right"></i> Ver en Honda.mx
               </a>
               <a href="#contacto-section" class="object__link-cotizar" style="color:#9e7e35; border-color:#9e7e35;">
@@ -779,16 +1147,19 @@
           </div>
         </div>
         <figure class="object__picture">
-          <img src="./public/assets/images/Honda CR-V 2024 Touring 1.5L Turbo.png" class="object__img" alt="Honda CR-V 2024">
+          <img src="./public/assets/images/Honda CR-V 2024 Touring 1.5L Turbo.png" class="object__img"
+            alt="Honda CR-V 2024">
         </figure>
       </section>
 
       <!-- 3 · Ford Mustang -->
       <section class="object__body" data-id="3">
         <div class="object__texts">
-          <span class="object__badge" style="background:#2e2e2e; color:#e2c47a;"><i class="bi bi-lightning-charge-fill"></i> Alto Rendimiento</span>
+          <span class="object__badge" style="background:#2e2e2e; color:#e2c47a;"><i
+              class="bi bi-lightning-charge-fill"></i> Alto Rendimiento</span>
           <h2 class="subtitle">Ford Mustang GT V8 2024 Edición Especial de Alto Rendimiento,
-            <span class="object__course">¡Un auto deportivo poderoso!, ideal para los amantes de la velocidad y usuarios exigentes.</span>
+            <span class="object__course">¡Un auto deportivo poderoso!, ideal para los amantes de la velocidad y usuarios
+              exigentes.</span>
           </h2>
           <div class="object__review">
             <p><strong>Motor:</strong> 5.0L V8 Coyote de 4ta Generación</p>
@@ -801,7 +1172,8 @@
             <p>El tope de gama en los muscle cars americanos modernos</p>
             <p>El sonido del V8 y la respuesta del acelerador ofrecen una experiencia inigualable</p>
             <div>
-              <a href="https://www.ford.mx/" target="_blank" rel="noopener" class="object__link-oficial" style="background:#0d0d0d; border-color:#e2c47a; color:#e2c47a;">
+              <a href="https://www.ford.mx/" target="_blank" rel="noopener" class="object__link-oficial"
+                style="background:#0d0d0d; border-color:#e2c47a; color:#e2c47a;">
                 <i class="bi bi-box-arrow-up-right"></i> Ver en Ford.mx
               </a>
               <a href="#contacto-section" class="object__link-cotizar" style="color:#2e2e2e; border-color:#2e2e2e;">
@@ -811,15 +1183,18 @@
           </div>
         </div>
         <figure class="object__picture">
-          <img src="./public/assets/images/Ford Mustang GT V8 2024.webp" class="object__img" alt="Ford Mustang GT V8 2024">
+          <img src="./public/assets/images/Ford Mustang GT V8 2024.webp" class="object__img"
+            alt="Ford Mustang GT V8 2024">
         </figure>
       </section>
 
       <!-- 4 · Toyota Hilux -->
       <section class="object__body" data-id="4">
         <div class="object__texts">
-          <span class="object__badge" style="background:#1a1a1a; color:#c9a84c; border: 1.5px solid #c9a84c;"><i class="bi bi-truck"></i> Trabajo Pesado</span>
-          <h2 class="subtitle">Toyota Hilux 2024 Doble Cabina SR, Diésel 2.8L, Tracción 4x4, Capacidad de Carga de 1 Tonelada,
+          <span class="object__badge" style="background:#1a1a1a; color:#c9a84c; border: 1.5px solid #c9a84c;"><i
+              class="bi bi-truck"></i> Trabajo Pesado</span>
+          <h2 class="subtitle">Toyota Hilux 2024 Doble Cabina SR, Diésel 2.8L, Tracción 4x4, Capacidad de Carga de 1
+            Tonelada,
             <span class="object__course">¡La pickup ideal para el trabajo pesado y la aventura todoterreno!</span>
           </h2>
           <div class="object__review">
@@ -842,16 +1217,19 @@
           </div>
         </div>
         <figure class="object__picture">
-          <img src="./public/assets/images/Toyota Hilux 2024 Doble Cabina SR.png" class="object__img" alt="Toyota Hilux 2024">
+          <img src="./public/assets/images/Toyota Hilux 2024 Doble Cabina SR.png" class="object__img"
+            alt="Toyota Hilux 2024">
         </figure>
       </section>
 
       <!-- 5 · Toyota Prius -->
       <section class="object__body" data-id="5">
         <div class="object__texts">
-          <span class="object__badge" style="background:#4a5240; color:#e2c47a;"><i class="bi bi-leaf-fill"></i> Eco Híbrido</span>
+          <span class="object__badge" style="background:#4a5240; color:#e2c47a;"><i class="bi bi-leaf-fill"></i> Eco
+            Híbrido</span>
           <h2 class="subtitle">Toyota Prius 2024 Híbrido — Motor 2.0L + Eléctrico — Máxima Eficiencia,
-            <span class="object__course">¡El auto ideal para quienes buscan el máximo ahorro de gasolina y cuidar el medio ambiente!</span>
+            <span class="object__course">¡El auto ideal para quienes buscan el máximo ahorro de gasolina y cuidar el
+              medio ambiente!</span>
           </h2>
           <div class="object__review">
             <p><strong>Tren Motriz:</strong> Motor 2.0L ciclo Atkinson + Eléctrico de imanes permanentes</p>
@@ -861,7 +1239,8 @@
             <p><strong>Emisiones:</strong> Ultra bajas — califica para incentivos ecológicos</p>
             <p>Modos: EV · Eco · Normal · Power · Batería de iones de litio de alta densidad</p>
             <div>
-              <a href="https://www.toyota.com.mx" target="_blank" rel="noopener" class="object__link-oficial" style="background:#0d0d0d; border-color:#4a5240; color:#c9a84c;">
+              <a href="https://www.toyota.com.mx" target="_blank" rel="noopener" class="object__link-oficial"
+                style="background:#0d0d0d; border-color:#4a5240; color:#c9a84c;">
                 <i class="bi bi-box-arrow-up-right"></i> Ver en Toyota.mx
               </a>
               <a href="#contacto-section" class="object__link-cotizar" style="color:#4a5240; border-color:#4a5240;">
@@ -878,9 +1257,11 @@
       <!-- 6 · Mazda 3 -->
       <section class="object__body" data-id="6">
         <div class="object__texts">
-          <span class="object__badge" style="background:#c9a84c; color:#0d0d0d;"><i class="bi bi-gem"></i> Premium</span>
+          <span class="object__badge" style="background:#c9a84c; color:#0d0d0d;"><i class="bi bi-gem"></i>
+            Premium</span>
           <h2 class="subtitle">Mazda 3 Sedán 2024 Signature 2.5L Turbo AWD Piel,
-            <span class="object__course">¡Diseño Kodo, tracción integral y audio Bose® — el sedán premium más deseado del segmento!</span>
+            <span class="object__course">¡Diseño Kodo, tracción integral y audio Bose® — el sedán premium más deseado
+              del segmento!</span>
           </h2>
           <div class="object__review">
             <p><strong>Diseño:</strong> Líneas fluidas Kodo · Faros LED dirigibles · Rines de aluminio 18"</p>
@@ -947,75 +1328,72 @@
   </section>
 
   <!-- ════ EXPERIENCIA ELITE ════ -->
-<section class="elite-xp" id="experiencia-section">
+  <section class="elite-xp" id="experiencia-section">
 
-  <!-- Video fondo -->
-  <div class="elite-xp__video-bg">
-    <iframe
-      src="https://www.youtube-nocookie.com/embed/1lEJ1dEE9Mo?autoplay=1&mute=1&loop=1&playlist=1lEJ1dEE9Mo&controls=0&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1"
-      allow="autoplay; encrypted-media"
-      allowfullscreen
-      style="
+    <!-- Video fondo -->
+    <div class="elite-xp__video-bg">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/1lEJ1dEE9Mo?autoplay=1&mute=1&loop=1&playlist=1lEJ1dEE9Mo&controls=0&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1"
+        allow="autoplay; encrypted-media" allowfullscreen style="
         position:absolute; top:50%; left:50%;
         transform:translate(-50%,-50%);
         width:177.78vh; min-width:100%;
         height:56.25vw; min-height:100%;
         border:none; pointer-events:none;
-      "
-    ></iframe>
-  </div>
-
-  <!-- Overlay degradado dorado -->
-  <div class="elite-xp__overlay"></div>
-
-  <!-- Contenido -->
-  <div class="elite-xp__content container">
-
-    <span class="elite-xp__eyebrow reveal-up">✦ La Diferencia AutoElite</span>
-    <h2 class="elite-xp__title reveal-up">Más que un auto.<br><span>Una experiencia.</span></h2>
-    <p class="elite-xp__desc reveal-up">
-      Desde el momento en que pisas nuestra agencia, todo está diseñado para ti.
-      Asesores certificados, pruebas de manejo sin compromiso y financiamiento
-      aprobado el mismo día. Así se vive el estándar AutoElite.
-    </p>
-
-    <!-- Pills de valor -->
-    <div class="elite-xp__pills reveal-up">
-      <div class="elite-xp__pill">
-        <i class="bi bi-shield-check-fill"></i>
-        <span>Garantía Extendida</span>
-      </div>
-      <div class="elite-xp__pill">
-        <i class="bi bi-speedometer2"></i>
-        <span>Prueba de Manejo</span>
-      </div>
-      <div class="elite-xp__pill">
-        <i class="bi bi-headset"></i>
-        <span>Asesor Dedicado</span>
-      </div>
-      <div class="elite-xp__pill">
-        <i class="bi bi-patch-check-fill"></i>
-        <span>Autos Certificados</span>
-      </div>
+      "></iframe>
     </div>
 
-    <div class="elite-xp__ctas reveal-up">
-      <a href="#catalogo-section" class="elite-xp__cta-primary">
-        <i class="bi bi-car-front-fill"></i> Explorar Catálogo
-      </a>
-      <a href="#contacto-section" class="elite-xp__cta-secondary">
-        <i class="bi bi-telephone-fill"></i> Hablar con un asesor
-      </a>
+    <!-- Overlay degradado dorado -->
+    <div class="elite-xp__overlay"></div>
+
+    <!-- Contenido -->
+    <div class="elite-xp__content container">
+
+      <span class="elite-xp__eyebrow reveal-up">✦ La Diferencia AutoElite</span>
+      <h2 class="elite-xp__title reveal-up">Más que un auto.<br><span>Una experiencia.</span></h2>
+      <p class="elite-xp__desc reveal-up">
+        Desde el momento en que pisas nuestra agencia, todo está diseñado para ti.
+        Asesores certificados, pruebas de manejo sin compromiso y financiamiento
+        aprobado el mismo día. Así se vive el estándar AutoElite.
+      </p>
+
+      <!-- Pills de valor -->
+      <div class="elite-xp__pills reveal-up">
+        <div class="elite-xp__pill">
+          <i class="bi bi-shield-check-fill"></i>
+          <span>Garantía Extendida</span>
+        </div>
+        <div class="elite-xp__pill">
+          <i class="bi bi-speedometer2"></i>
+          <span>Prueba de Manejo</span>
+        </div>
+        <div class="elite-xp__pill">
+          <i class="bi bi-headset"></i>
+          <span>Asesor Dedicado</span>
+        </div>
+        <div class="elite-xp__pill">
+          <i class="bi bi-patch-check-fill"></i>
+          <span>Autos Certificados</span>
+        </div>
+      </div>
+
+      <div class="elite-xp__ctas reveal-up">
+        <a href="#catalogo-section" class="elite-xp__cta-primary">
+          <i class="bi bi-car-front-fill"></i> Explorar Catálogo
+        </a>
+        <a href="#contacto-section" class="elite-xp__cta-secondary">
+          <i class="bi bi-telephone-fill"></i> Hablar con un asesor
+        </a>
+      </div>
+
     </div>
 
-  </div>
+    <!-- Flecha scroll hacia abajo -->
+    <div class="elite-xp__scroll-hint">
+      <i class="bi bi-chevron-double-down"></i>
+    </div>
 
-  <!-- Flecha scroll hacia abajo -->
-  <div class="elite-xp__scroll-hint">
-    <i class="bi bi-chevron-double-down"></i>
-  </div>
-
-</section>
+  </section>
 
 
   <!-- ════ KNOWLEDGE ════ -->
@@ -1028,9 +1406,10 @@
           adecuado según tu estilo de vida. Te describimos las opciones de SUVs para la familia, sedanes para la ciudad
           y pickups para el trabajo duro. Comparamos planes de financiamiento, tasas de interés
           y enganches para que elijas el plan que cuide tu economía. Te ayudamos a
-          seleccionar los paquetes de seguridad activa y pasiva indispensables para tu tranquilidad. También te orientamos
+          seleccionar los paquetes de seguridad activa y pasiva indispensables para tu tranquilidad. También te
+          orientamos
           sobre los calendarios de mantenimiento preventivo y te recomendamos accesorios
-          esenciales como seguros, películas antiasalto y tapetes de uso rudo. Nuestro objetivo es que tomes 
+          esenciales como seguros, películas antiasalto y tapetes de uso rudo. Nuestro objetivo es que tomes
           decisiones informadas y personalizadas para llevarte a casa el auto ideal.</p>
         <a href="#catalogo-section" class="cta-2">Explorar Modelos</a>
       </div>
@@ -1053,7 +1432,8 @@
           <div class="financing__icon"><i class="bi bi-rocket-takeoff"></i></div>
           <p class="financing__plan">Plan Básico</p>
           <h3 class="financing__card-title">Arranque Fácil</h3>
-          <p class="financing__desc">Ideal para primera compra. Requisitos mínimos, enganche accesible y proceso rápido.</p>
+          <p class="financing__desc">Ideal para primera compra. Requisitos mínimos, enganche accesible y proceso rápido.
+          </p>
           <ul class="financing__features">
             <li><i class="bi bi-check-circle-fill"></i> Enganche desde 15%</li>
             <li><i class="bi bi-check-circle-fill"></i> Plazos de 12 a 36 meses</li>
@@ -1067,7 +1447,8 @@
           <div class="financing__icon"><i class="bi bi-star-fill"></i></div>
           <p class="financing__plan">Plan Plus</p>
           <h3 class="financing__card-title">AutoElite Plus</h3>
-          <p class="financing__desc">El más solicitado. Mensualidad cómoda + seguro + mantenimiento incluidos el primer año.</p>
+          <p class="financing__desc">El más solicitado. Mensualidad cómoda + seguro + mantenimiento incluidos el primer
+            año.</p>
           <ul class="financing__features">
             <li><i class="bi bi-check-circle-fill"></i> Enganche desde 10%</li>
             <li><i class="bi bi-check-circle-fill"></i> Plazos de 24 a 60 meses</li>
@@ -1082,7 +1463,8 @@
           <div class="financing__icon"><i class="bi bi-gem"></i></div>
           <p class="financing__plan">Plan Sin Buró</p>
           <h3 class="financing__card-title">Historial Limpio</h3>
-          <p class="financing__desc">Soluciones especiales si tienes historial crediticio complicado. Tu situación no te detiene.</p>
+          <p class="financing__desc">Soluciones especiales si tienes historial crediticio complicado. Tu situación no te
+            detiene.</p>
           <ul class="financing__features">
             <li><i class="bi bi-check-circle-fill"></i> Sin consulta de buró</li>
             <li><i class="bi bi-check-circle-fill"></i> Enganche personalizado</li>
@@ -1106,7 +1488,8 @@
         <div class="testimonial">
           <span class="testimonial__quote-icon">"</span>
           <div class="testimonial__stars">★★★★★</div>
-          <p class="testimonial__text">El proceso fue increíblemente sencillo. En 3 días ya tenía las llaves de mi CR-V. El asesor fue honesto, paciente y sin presiones. Totalmente recomendados.</p>
+          <p class="testimonial__text">El proceso fue increíblemente sencillo. En 3 días ya tenía las llaves de mi CR-V.
+            El asesor fue honesto, paciente y sin presiones. Totalmente recomendados.</p>
           <div class="testimonial__author">
             <div class="testimonial__avatar">MC</div>
             <div>
@@ -1119,7 +1502,8 @@
         <div class="testimonial">
           <span class="testimonial__quote-icon">"</span>
           <div class="testimonial__stars">★★★★★</div>
-          <p class="testimonial__text">Tenía deudas en buró y pensé que nunca podría estrenar. AutoElite encontró un plan perfecto para mi situación. Ahora manejo mi Versa y pago cómodamente cada mes.</p>
+          <p class="testimonial__text">Tenía deudas en buró y pensé que nunca podría estrenar. AutoElite encontró un
+            plan perfecto para mi situación. Ahora manejo mi Versa y pago cómodamente cada mes.</p>
           <div class="testimonial__author">
             <div class="testimonial__avatar">RL</div>
             <div>
@@ -1132,7 +1516,8 @@
         <div class="testimonial">
           <span class="testimonial__quote-icon">"</span>
           <div class="testimonial__stars">★★★★★</div>
-          <p class="testimonial__text">La prueba de manejo del Mustang GT fue una experiencia que no olvidaré. El equipo conoce cada detalle del auto. Salí con las llaves ese mismo día. ¡Increíble!</p>
+          <p class="testimonial__text">La prueba de manejo del Mustang GT fue una experiencia que no olvidaré. El equipo
+            conoce cada detalle del auto. Salí con las llaves ese mismo día. ¡Increíble!</p>
           <div class="testimonial__author">
             <div class="testimonial__avatar">AH</div>
             <div>
@@ -1145,7 +1530,8 @@
         <div class="testimonial">
           <span class="testimonial__quote-icon">"</span>
           <div class="testimonial__stars">★★★★★</div>
-          <p class="testimonial__text">Buscaba una Hilux para mi negocio y AutoElite me ayudó a elegir la versión perfecta. El financiamiento fue más rápido de lo esperaba. Un servicio de primera.</p>
+          <p class="testimonial__text">Buscaba una Hilux para mi negocio y AutoElite me ayudó a elegir la versión
+            perfecta. El financiamiento fue más rápido de lo esperaba. Un servicio de primera.</p>
           <div class="testimonial__author">
             <div class="testimonial__avatar">JM</div>
             <div>
@@ -1158,7 +1544,8 @@
         <div class="testimonial">
           <span class="testimonial__quote-icon">"</span>
           <div class="testimonial__stars">★★★★★</div>
-          <p class="testimonial__text">El Prius superó mis expectativas de rendimiento. El asesor me explicó todo sobre el sistema híbrido sin tecnicismos. Llevo 8 meses y no podría estar más contenta.</p>
+          <p class="testimonial__text">El Prius superó mis expectativas de rendimiento. El asesor me explicó todo sobre
+            el sistema híbrido sin tecnicismos. Llevo 8 meses y no podría estar más contenta.</p>
           <div class="testimonial__author">
             <div class="testimonial__avatar">LP</div>
             <div>
@@ -1171,7 +1558,8 @@
         <div class="testimonial">
           <span class="testimonial__quote-icon">"</span>
           <div class="testimonial__stars">★★★★★</div>
-          <p class="testimonial__text">El Mazda 3 Signature es simplemente espectacular. AutoElite me consiguió un plan muy competitivo. El trato fue de primera clase desde el primer contacto.</p>
+          <p class="testimonial__text">El Mazda 3 Signature es simplemente espectacular. AutoElite me consiguió un plan
+            muy competitivo. El trato fue de primera clase desde el primer contacto.</p>
           <div class="testimonial__author">
             <div class="testimonial__avatar">CR</div>
             <div>
@@ -1200,10 +1588,12 @@
               <a href="tel:+527774395441" style="color:inherit;text-decoration:none;">+52 777 439 5441</a>
             </p>
             <p><i class="bi bi-envelope"></i>
-              <a href="mailto:soporte@autoelite.com" style="color:inherit;text-decoration:none;">soporte@autoelite.com</a>
+              <a href="mailto:soporte@autoelite.com"
+                style="color:inherit;text-decoration:none;">soporte@autoelite.com</a>
             </p>
             <p><i class="bi bi-whatsapp"></i>
-              <a href="https://wa.me/527774395441" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">WhatsApp Directo</a>
+              <a href="https://wa.me/527774395441" target="_blank" rel="noopener"
+                style="color:inherit;text-decoration:none;">WhatsApp Directo</a>
             </p>
             <p><i class="bi bi-geo-alt"></i> Av. Plan de Ayala 512, Cuernavaca, Morelos</p>
             <p><i class="bi bi-clock"></i> Lun–Sáb 9:00–20:00 · Dom 10:00–15:00</p>
@@ -1225,34 +1615,46 @@
       <div class="footer__section">
         <h3 class="footer__title">Catálogo</h3>
         <div class="footer__links">
-          <a href="https://www.nissan.mx" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-car-front"></i> Nissan Versa 2024</a>
-          <a href="https://www.honda.mx" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-car-front"></i> Honda CR-V 2024</a>
-          <a href="https://www.ford.mx" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-car-front"></i> Ford Mustang GT</a>
-          <a href="https://www.toyota.mx" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-truck"></i> Toyota Hilux 2024</a>
-          <a href="https://www.toyota.mx" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-ev-front"></i> Toyota Prius 2024</a>
-          <a href="https://www.mazda.mx" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-car-front"></i> Mazda 3 Signature</a>
+          <a href="https://www.nissan.mx" target="_blank" rel="noopener" class="footer__link"><i
+              class="bi bi-car-front"></i> Nissan Versa 2024</a>
+          <a href="https://www.honda.mx" target="_blank" rel="noopener" class="footer__link"><i
+              class="bi bi-car-front"></i> Honda CR-V 2024</a>
+          <a href="https://www.ford.mx" target="_blank" rel="noopener" class="footer__link"><i
+              class="bi bi-car-front"></i> Ford Mustang GT</a>
+          <a href="https://www.toyota.mx" target="_blank" rel="noopener" class="footer__link"><i
+              class="bi bi-truck"></i> Toyota Hilux 2024</a>
+          <a href="https://www.toyota.mx" target="_blank" rel="noopener" class="footer__link"><i
+              class="bi bi-ev-front"></i> Toyota Prius 2024</a>
+          <a href="https://www.mazda.mx" target="_blank" rel="noopener" class="footer__link"><i
+              class="bi bi-car-front"></i> Mazda 3 Signature</a>
         </div>
       </div>
 
       <div class="footer__section">
         <h3 class="footer__title">Síguenos</h3>
         <div class="footer__social">
-          <a href="https://www.facebook.com" target="_blank" rel="noopener" class="footer__social-icon" aria-label="Facebook">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener" class="footer__social-icon"
+            aria-label="Facebook">
             <i class="bi bi-facebook"></i>
           </a>
-          <a href="https://github.com/angelromero-dev/IntegradorSO-C2.git" target="_blank" rel="noopener" class="footer__social-icon" aria-label="GitHub">
+          <a href="https://github.com/angelromero-dev/IntegradorSO-C2.git" target="_blank" rel="noopener"
+            class="footer__social-icon" aria-label="GitHub">
             <i class="bi bi-github"></i>
           </a>
-          <a href="https://wa.me/527774395441" target="_blank" rel="noopener" class="footer__social-icon" aria-label="WhatsApp">
+          <a href="https://wa.me/527774395441" target="_blank" rel="noopener" class="footer__social-icon"
+            aria-label="WhatsApp">
             <i class="bi bi-whatsapp"></i>
           </a>
         </div>
         <br>
         <h3 class="footer__title" style="margin-top:12px;">Recursos</h3>
         <div class="footer__links">
-          <a href="https://www.profeco.gob.mx" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-chevron-right"></i> PROFECO</a>
-          <a href="https://www.amda.mx" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-chevron-right"></i> AMDA México</a>
-          <a href="https://www.sat.gob.mx" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-chevron-right"></i> SAT — Deducción Auto</a>
+          <a href="https://www.profeco.gob.mx" target="_blank" rel="noopener" class="footer__link"><i
+              class="bi bi-chevron-right"></i> PROFECO</a>
+          <a href="https://www.amda.mx" target="_blank" rel="noopener" class="footer__link"><i
+              class="bi bi-chevron-right"></i> AMDA México</a>
+          <a href="https://www.sat.gob.mx" target="_blank" rel="noopener" class="footer__link"><i
+              class="bi bi-chevron-right"></i> SAT — Deducción Auto</a>
         </div>
       </div>
 
@@ -1261,7 +1663,9 @@
     <div class="footer__bottom">
       <div class="footer__divider"></div>
       <p class="footer__copyright">
-        © <span id="currentYear"></span> AutoElite — Todos los derechos reservados | Diseñado por Angel Jesús Romero Pérez.
+        © <span id="currentYear"></span> AutoElite — Todos los derechos reservados | Diseñado por Angel Jesús Romero
+        Pérez, Joshua Alejandro Tabales Ponce, Diego Reyez Picazo, Eveline Sarahi Gutierrez Esquivel & Merari Nicole
+        Trujillo Bucio.
       </p>
     </div>
   </footer>
@@ -1270,24 +1674,25 @@
     document.getElementById('currentYear').textContent = new Date().getFullYear();
   </script>
   <script>
-  // Scroll reveal — IntersectionObserver
-  const revealEls = document.querySelectorAll('.reveal-up');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target); // solo una vez
-      }
-    });
-  }, { threshold: 0.15 });
+    // Scroll reveal — IntersectionObserver
+    const revealEls = document.querySelectorAll('.reveal-up');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // solo una vez
+        }
+      });
+    }, { threshold: 0.15 });
 
-  revealEls.forEach(el => observer.observe(el));
-</script>
+    revealEls.forEach(el => observer.observe(el));
+  </script>
 
-<script src="./public/assets/js/animation/IntersectionObserver.js"></script>
+  <script src="./public/assets/js/animation/IntersectionObserver.js"></script>
   <script src="./public/assets/js/animation/nav.js"></script>
   <script src="./public/assets/js/animation/slider.js"></script>
   <script src="./public/assets/js/bootstrap/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>

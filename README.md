@@ -2,7 +2,8 @@
 
 > Proyecto Final de Sistemas Operativos · Nivel Universitario · Abril 2026
 
-© 2026 Angel Jesús Romero Pérez. Todos los derechos reservados.
+© 2026 Angel Jesús Romero Pérez, Joshua Alejandro Tabales Ponce, Diego Reyez Picazo, Eveline Sarahi Gutierrez Esquivel & 
+Merari Nicole Trujillo Bucio. Todos los derechos reservados.
 Consulta [LICENSE](LICENSE.md) antes de usar o referenciar este repositorio.
 
 ---
@@ -21,13 +22,13 @@ diseño UI/UX, manejo del DOM con JavaScript vanilla y uso de frameworks CSS.
 
 ## Tecnologías Utilizadas
 
-| Tecnología | Uso |
-|---|---|
-| HTML5 semántico | Estructura y contenido |
+| Tecnología           | Uso                                    |
+| -------------------- | -------------------------------------- |
+| HTML5 semántico      | Estructura y contenido                 |
 | CSS3 + Variables CSS | Estilos, paleta de colores, responsive |
-| Bootstrap 5 | Grid, navbar y componentes base |
-| Bootstrap Icons | Iconografía |
-| JavaScript Vanilla | Slider automático, navbar dinámica |
+| Bootstrap 5          | Grid, navbar y componentes base        |
+| Bootstrap Icons      | Iconografía                            |
+| JavaScript Vanilla   | Slider automático, navbar dinámica     |
 
 ---
 
@@ -87,14 +88,14 @@ AutoElite/
 
 ## Empresa Ficticia — AutoElite
 
-| Dato | Valor |
-|---|---|
-| Nombre | AutoElite Agencia Automotriz Premium |
+| Dato      | Valor                                                   |
+| --------- | ------------------------------------------------------- |
+| Nombre    | AutoElite Agencia Automotriz Premium                    |
 | Ubicación | Av. Plan de Ayala 512, Cuernavaca, Morelos *(ficticio)* |
-| Teléfono | +52 777 439 5441 *(ficticio)* |
-| Correo | soporte@autoelite.com *(ficticio)* |
-| Horario | Lun–Sáb 9:00–20:00 · Dom 10:00–15:00 |
-| Redes | Facebook · WhatsApp · GitHub |
+| Teléfono  | +52 777 439 5441 *(ficticio)*                           |
+| Correo    | soporte@autoelite.com *(ficticio)*                      |
+| Horario   | Lun–Sáb 9:00–20:00 · Dom 10:00–15:00                    |
+| Redes     | Facebook · WhatsApp · GitHub                            |
 
 > **Aviso:** AutoElite es una empresa 100 % ficticia creada para este proyecto escolar.
 > Los datos de contacto, precios y disponibilidad de vehículos son inventados.
@@ -109,10 +110,13 @@ meramente ilustrativa con fines académicos y sin ningún vínculo comercial.
 
 ---
 
-## Autor
+## Autores
 
 **Angel Jesús Romero Pérez**
-Desarrollador y diseñador del proyecto
+**Joshua Alejandro Tabales Ponce**
+**Diego Reyez Picazo**
+**Eveline Sarahi Gutierrez Esquivel** 
+**Merari Nicole Trujillo Bucio**
 Abril 2026
 
 [![GitHub](https://img.shields.io/badge/GitHub-angelromero--dev-black?logo=github&style=flat-square)](https://github.com/angelromero-dev/IntegradorSO-C2)

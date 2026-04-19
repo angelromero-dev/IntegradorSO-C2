@@ -12,7 +12,7 @@
   <link href='./public/assets/icons/bootstrap/bootstrap-icons.min.css' rel='stylesheet'>
   <link href='./public/assets/icons/bootstrap/boxicons.min.css' rel='stylesheet'>
 
-  <link rel="shortcut icon" href="./public/assets/favicon/AutoElite-favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="./public/assets/favicon/AutoElite-favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./public/assets/css/index.css">
   <link rel="stylesheet" href="./public/assets/css/main.css">
 
@@ -60,11 +60,20 @@
     .nav-link:hover, .nav-link.active { color: #c9a84c !important; }
 
     /* ── Hero override ───────────────────────────────── */
-    .hero::before {
-      background-image:
-        linear-gradient(180deg, rgba(13,13,13,0.72) 0%, rgba(13,13,13,0.72) 100%),
-        url("./public/assets/images/index-banner.jpg") !important;
-    }
+.hero::before {
+  background-image:
+    linear-gradient(180deg, rgba(13,13,13,0.70) 0%, rgba(13,13,13,0.70) 100%) !important;
+}
+
+
+.hero__video-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;     
+  pointer-events: none;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+}
     .hero_title { color: #f5f0e8 !important; }
     .hero_pg    { color: rgba(245,240,232,0.80) !important; }
 
@@ -380,6 +389,231 @@
       .brands__card { min-width: 110px; padding: 18px 12px; }
       .financing__card, .testimonial { padding: 24px 20px; }
     }
+
+
+    /* ── SLIDER IMAGE — sin recorte ──────────────────── */
+.object__picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 560px;
+  min-height: 340px;
+  max-height: 420px;
+  background: transparent;
+  flex-shrink: 0;
+}
+
+.object__img {
+  width: 100%;
+  height: 100%;
+  max-height: 420px;
+  object-fit: contain !important;  
+  object-position: center;
+  display: block;
+}
+
+
+@media (max-width: 768px) {
+  .object__picture {
+    max-width: 100%;
+    min-height: 220px;
+    max-height: 280px;
+  }
+  .object__img {
+    max-height: 280px;
+  }
+}
+
+/* ══ EXPERIENCIA ELITE ══════════════════════════════ */
+.elite-xp {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Video fondo */
+.elite-xp__video-bg {
+  position: absolute;
+  top: -15%;
+  left: 0;
+  width: 100%;
+  height: 130%;        
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  will-change: transform;
+}
+/* Overlay con degradado dorado-negro */
+.elite-xp__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg,
+      rgba(13,13,13,0.55) 0%,
+      rgba(13,13,13,0.72) 40%,
+      rgba(13,13,13,0.88) 100%),
+    radial-gradient(ellipse at center bottom,
+      rgba(201,168,76,0.18) 0%,
+      transparent 70%);
+}
+
+/* Contenido */
+.elite-xp__content {
+  position: relative;
+  z-index: 2;
+  padding: 120px 20px 100px;
+  max-width: 820px;
+}
+
+.elite-xp__eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #c9a84c;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.elite-xp__title {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 800;
+  color: #f5f0e8;
+  line-height: 1.15;
+  margin-bottom: 22px;
+  letter-spacing: -0.02em;
+}
+.elite-xp__title span {
+  color: #c9a84c;
+}
+
+.elite-xp__desc {
+  font-size: 1rem;
+  color: rgba(245,240,232,0.78);
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+/* Pills */
+.elite-xp__pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 44px;
+}
+.elite-xp__pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 40px;
+  background: rgba(201,168,76,0.10);
+  border: 1px solid rgba(201,168,76,0.35);
+  color: #e2c47a;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  backdrop-filter: blur(6px);
+  transition: background .25s, transform .25s;
+}
+.elite-xp__pill:hover {
+  background: rgba(201,168,76,0.22);
+  transform: translateY(-3px);
+}
+.elite-xp__pill i {
+  font-size: 1rem;
+  color: #c9a84c;
+}
+
+/* CTAs */
+.elite-xp__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+.elite-xp__cta-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 34px; border-radius: 6px;
+  background: #c9a84c; color: #0d0d0d;
+  font-size: 0.8rem; font-weight: 800;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  text-decoration: none;
+  transition: background .25s, transform .2s, box-shadow .25s;
+  box-shadow: 0 4px 20px rgba(201,168,76,0.35);
+}
+.elite-xp__cta-primary:hover {
+  background: #e2c47a; color: #0d0d0d;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(201,168,76,0.45);
+  text-decoration: none;
+}
+.elite-xp__cta-secondary {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 34px; border-radius: 6px;
+  background: transparent; color: #f5f0e8;
+  border: 1.5px solid rgba(245,240,232,0.45);
+  font-size: 0.8rem; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  text-decoration: none;
+  transition: border-color .25s, background .25s, transform .2s;
+}
+.elite-xp__cta-secondary:hover {
+  border-color: #c9a84c; color: #c9a84c;
+  background: rgba(201,168,76,0.08);
+  transform: translateY(-3px);
+  text-decoration: none;
+}
+
+/* Scroll hint animado */
+.elite-xp__scroll-hint {
+  position: absolute;
+  bottom: 28px; left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: rgba(201,168,76,0.7);
+  font-size: 1.4rem;
+  animation: bounceDown 1.8s ease-in-out infinite;
+}
+@keyframes bounceDown {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.7; }
+  50%       { transform: translateX(-50%) translateY(10px); opacity: 1; }
+}
+
+/* ── ANIMACIONES DE SCROLL (reveal) ─────────────── */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.reveal-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Delay en cadena para cada hijo */
+.elite-xp__content .reveal-up:nth-child(1) { transition-delay: 0s;    }
+.elite-xp__content .reveal-up:nth-child(2) { transition-delay: 0.15s; }
+.elite-xp__content .reveal-up:nth-child(3) { transition-delay: 0.28s; }
+.elite-xp__content .reveal-up:nth-child(4) { transition-delay: 0.42s; }
+.elite-xp__content .reveal-up:nth-child(5) { transition-delay: 0.56s; }
+
+@media (max-width: 600px) {
+  .elite-xp__title { font-size: 2rem; }
+  .elite-xp__pill  { padding: 8px 16px; font-size: 0.72rem; }
+  .elite-xp__cta-primary,
+  .elite-xp__cta-secondary { width: 100%; justify-content: center; }
+}
+
+
+
   </style>
 </head>
 
@@ -390,7 +624,7 @@
     <div class="container">
       <a class="navbar-brand" href="#">
         <span class="title-main-1">A</span>uto<span class="title-main-1">E</span>lite
-        <img src="./public/assets/favicon/AutoElite-favicon.png" class="favicon" alt="">
+        <img src="./public/assets/favicon/AutoElite-favicon.svg" class="favicon" alt="">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -419,20 +653,41 @@
   </nav>
 
   <!-- ════ HERO ════ -->
-  <header class="hero" id="inicio">
-    <section class="hero__container container">
-      <span class="hero_subtitle_tag">✦ Agencia Automotriz Premium — Cuernavaca, Morelos</span>
-      <h1 class="hero_title">Encuentra el vehículo ideal:<br>Sedanes, SUVs &amp; Más</h1>
-      <p class="hero_pg">
-        ¡Aquí descubrirás las mejores opciones automotrices, desde autos compactos hasta pickups de trabajo pesado!
-        Asesoría personalizada, financiamiento flexible y posventa de clase mundial.
-      </p>
-      <p>
-        <i class="bi bi-car-front-fill" style="font-size: 75px !important; color: #f5f0e8;"></i>
-        <i class="bi bi-ev-front-fill" style="font-size: 75px !important; color: #c9a84c;"></i>
-      </p>
-    </section>
-  </header>
+<header class="hero" id="inicio">
+
+  <div class="hero__video-bg">
+    <iframe
+      src="https://www.youtube-nocookie.com/embed/t9-cMiEDNyk?autoplay=1&mute=1&loop=1&playlist=t9-cMiEDNyk&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      style="
+        position:absolute;
+        top:50%; left:50%;
+        transform:translate(-50%,-50%);
+        width:177.78vh;
+        min-width:100%;
+        height:56.25vw;
+        min-height:100%;
+        border:none;
+        pointer-events:none;
+      "
+    ></iframe>
+  </div>
+
+  <section class="hero__container container">
+    <span class="hero_subtitle_tag">✦ Agencia Automotriz Premium — Cuernavaca, Morelos</span>
+    <h1 class="hero_title">Encuentra el vehículo ideal:<br>Sedanes, SUVs &amp; Más</h1>
+    <p class="hero_pg">
+      ¡Aquí descubrirás las mejores opciones automotrices, desde autos compactos hasta pickups de trabajo pesado!
+      Asesoría personalizada, financiamiento flexible y posventa de clase mundial.
+    </p>
+    <p>
+      <i class="bi bi-car-front-fill" style="font-size:75px !important; color:#f5f0e8;"></i>
+      <i class="bi bi-ev-front-fill" style="font-size:75px !important; color:#c9a84c;"></i>
+    </p>
+  </section>
+
+</header>
 
   <!-- ════ STATS BAR ════ -->
   <div class="stats-bar">
@@ -485,7 +740,7 @@
             <p>Ideal para el día a día en la ciudad y viajes familiares cortos</p>
             <p>Destaca por su bajo costo de mantenimiento a largo plazo</p>
             <div>
-              <a href="https://www.nissan.com.mx/autos/versa.html" target="_blank" rel="noopener" class="object__link-oficial">
+              <a href="https://www.nissan.com.mx" target="_blank" rel="noopener" class="object__link-oficial">
                 <i class="bi bi-box-arrow-up-right"></i> Ver en Nissan.mx
               </a>
               <a href="#contacto-section" class="object__link-cotizar">
@@ -495,7 +750,7 @@
           </div>
         </div>
         <figure class="object__picture">
-          <img src="./public/assets/images/PocoX5.png" class="object__img" alt="Nissan Versa 2024">
+          <img src="./public/assets/images/Nissan Versa 2024 Advance CVT.webp" class="object__img" alt="Nissan Versa 2024">
         </figure>
       </section>
 
@@ -524,7 +779,7 @@
           </div>
         </div>
         <figure class="object__picture">
-          <img src="./public/assets/images/msi GF63.png" class="object__img" alt="Honda CR-V 2024">
+          <img src="./public/assets/images/Honda CR-V 2024 Touring 1.5L Turbo.png" class="object__img" alt="Honda CR-V 2024">
         </figure>
       </section>
 
@@ -546,7 +801,7 @@
             <p>El tope de gama en los muscle cars americanos modernos</p>
             <p>El sonido del V8 y la respuesta del acelerador ofrecen una experiencia inigualable</p>
             <div>
-              <a href="https://www.ford.com.mx/autos/mustang/" target="_blank" rel="noopener" class="object__link-oficial" style="background:#0d0d0d; border-color:#e2c47a; color:#e2c47a;">
+              <a href="https://www.ford.mx/" target="_blank" rel="noopener" class="object__link-oficial" style="background:#0d0d0d; border-color:#e2c47a; color:#e2c47a;">
                 <i class="bi bi-box-arrow-up-right"></i> Ver en Ford.mx
               </a>
               <a href="#contacto-section" class="object__link-cotizar" style="color:#2e2e2e; border-color:#2e2e2e;">
@@ -556,7 +811,7 @@
           </div>
         </div>
         <figure class="object__picture">
-          <img src="./public/assets/images/Rx 7800xt spectral.webp" class="object__img" alt="Ford Mustang GT V8 2024">
+          <img src="./public/assets/images/Ford Mustang GT V8 2024.webp" class="object__img" alt="Ford Mustang GT V8 2024">
         </figure>
       </section>
 
@@ -577,7 +832,7 @@
             <br>
             <p>Chasis de acero ultra resistente · Confiabilidad legendaria · Capacidad de vadeo superior</p>
             <div>
-              <a href="https://www.toyota.com.mx/hilux" target="_blank" rel="noopener" class="object__link-oficial">
+              <a href="https://www.toyota.com.mx" target="_blank" rel="noopener" class="object__link-oficial">
                 <i class="bi bi-box-arrow-up-right"></i> Ver en Toyota.mx
               </a>
               <a href="#contacto-section" class="object__link-cotizar">
@@ -587,7 +842,7 @@
           </div>
         </div>
         <figure class="object__picture">
-          <img src="./public/assets/images/Xiaomi 11T Pro.jpg" class="object__img" alt="Toyota Hilux 2024">
+          <img src="./public/assets/images/Toyota Hilux 2024 Doble Cabina SR.png" class="object__img" alt="Toyota Hilux 2024">
         </figure>
       </section>
 
@@ -606,7 +861,7 @@
             <p><strong>Emisiones:</strong> Ultra bajas — califica para incentivos ecológicos</p>
             <p>Modos: EV · Eco · Normal · Power · Batería de iones de litio de alta densidad</p>
             <div>
-              <a href="https://www.toyota.com.mx/prius" target="_blank" rel="noopener" class="object__link-oficial" style="background:#0d0d0d; border-color:#4a5240; color:#c9a84c;">
+              <a href="https://www.toyota.com.mx" target="_blank" rel="noopener" class="object__link-oficial" style="background:#0d0d0d; border-color:#4a5240; color:#c9a84c;">
                 <i class="bi bi-box-arrow-up-right"></i> Ver en Toyota.mx
               </a>
               <a href="#contacto-section" class="object__link-cotizar" style="color:#4a5240; border-color:#4a5240;">
@@ -616,7 +871,7 @@
           </div>
         </div>
         <figure class="object__picture">
-          <img src="./public/assets/images/Rizen 5 5600G.png" class="object__img" alt="Toyota Prius 2024">
+          <img src="./public/assets/images/Toyota Prius 2024 Híbrido.webp" class="object__img" alt="Toyota Prius 2024">
         </figure>
       </section>
 
@@ -636,7 +891,7 @@
             <p><strong>Seguridad:</strong> Punto ciego · Cámara 360° · Alerta de tráfico cruzado</p>
             <p>Head-Up Display · Quemacocos · Piel genuina · Paletas al volante</p>
             <div>
-              <a href="https://www.mazdamexico.com.mx/modelos/sedanes/mazda3-sedan" target="_blank" rel="noopener" class="object__link-oficial">
+              <a href="https://www.mazdamexico.com.mx" target="_blank" rel="noopener" class="object__link-oficial">
                 <i class="bi bi-box-arrow-up-right"></i> Ver en Mazda.mx
               </a>
               <a href="#contacto-section" class="object__link-cotizar">
@@ -646,7 +901,7 @@
           </div>
         </div>
         <figure class="object__picture">
-          <img src="./public/assets/images/MackBook Air 8gb.webp" class="object__img" alt="Mazda 3 Sedán 2024">
+          <img src="./public/assets/images/Mazda 3 Sedán 2026.png" class="object__img" alt="Mazda 3 Sedán 2024">
         </figure>
       </section>
 
@@ -660,28 +915,28 @@
       <span class="brands__eyebrow">✦ Marcas que Representamos</span>
       <h2 class="brands__title">Nuestras <span>Alianzas Oficiales</span></h2>
       <div class="brands__grid">
-        <a href="https://www.nissan.com.mx" target="_blank" rel="noopener" class="brands__card">
+        <a href="https://www.nissan.mx" target="_blank" rel="noopener" class="brands__card">
           <i class="bi bi-circle-fill"></i> Nissan
         </a>
-        <a href="https://www.honda.com.mx" target="_blank" rel="noopener" class="brands__card">
+        <a href="https://www.honda.mx" target="_blank" rel="noopener" class="brands__card">
           <i class="bi bi-circle"></i> Honda
         </a>
-        <a href="https://www.toyota.com.mx" target="_blank" rel="noopener" class="brands__card">
+        <a href="https://www.toyota.mx" target="_blank" rel="noopener" class="brands__card">
           <i class="bi bi-gear-fill"></i> Toyota
         </a>
-        <a href="https://www.ford.com.mx" target="_blank" rel="noopener" class="brands__card">
+        <a href="https://www.ford.mx" target="_blank" rel="noopener" class="brands__card">
           <i class="bi bi-diamond-fill"></i> Ford
         </a>
-        <a href="https://www.mazdamexico.com.mx" target="_blank" rel="noopener" class="brands__card">
+        <a href="https://www.mazda.mx/" target="_blank" rel="noopener" class="brands__card">
           <i class="bi bi-hypnotize"></i> Mazda
         </a>
-        <a href="https://www.chevrolet.com.mx" target="_blank" rel="noopener" class="brands__card">
+        <a href="https://www.chevrolet.mx" target="_blank" rel="noopener" class="brands__card">
           <i class="bi bi-plus-circle-fill"></i> Chevrolet
         </a>
-        <a href="https://www.kia.com/mx" target="_blank" rel="noopener" class="brands__card">
+        <a href="https://www.kia.com/mx/main.html" target="_blank" rel="noopener" class="brands__card">
           <i class="bi bi-triangle-fill"></i> Kia
         </a>
-        <a href="https://www.volkswagen.com.mx" target="_blank" rel="noopener" class="brands__card">
+        <a href="https://www.volkswagen.mx" target="_blank" rel="noopener" class="brands__card">
           <i class="bi bi-circle-half"></i> Volkswagen
         </a>
       </div>
@@ -690,6 +945,78 @@
       </p>
     </div>
   </section>
+
+  <!-- ════ EXPERIENCIA ELITE ════ -->
+<section class="elite-xp" id="experiencia-section">
+
+  <!-- Video fondo -->
+  <div class="elite-xp__video-bg">
+    <iframe
+      src="https://www.youtube-nocookie.com/embed/1lEJ1dEE9Mo?autoplay=1&mute=1&loop=1&playlist=1lEJ1dEE9Mo&controls=0&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      style="
+        position:absolute; top:50%; left:50%;
+        transform:translate(-50%,-50%);
+        width:177.78vh; min-width:100%;
+        height:56.25vw; min-height:100%;
+        border:none; pointer-events:none;
+      "
+    ></iframe>
+  </div>
+
+  <!-- Overlay degradado dorado -->
+  <div class="elite-xp__overlay"></div>
+
+  <!-- Contenido -->
+  <div class="elite-xp__content container">
+
+    <span class="elite-xp__eyebrow reveal-up">✦ La Diferencia AutoElite</span>
+    <h2 class="elite-xp__title reveal-up">Más que un auto.<br><span>Una experiencia.</span></h2>
+    <p class="elite-xp__desc reveal-up">
+      Desde el momento en que pisas nuestra agencia, todo está diseñado para ti.
+      Asesores certificados, pruebas de manejo sin compromiso y financiamiento
+      aprobado el mismo día. Así se vive el estándar AutoElite.
+    </p>
+
+    <!-- Pills de valor -->
+    <div class="elite-xp__pills reveal-up">
+      <div class="elite-xp__pill">
+        <i class="bi bi-shield-check-fill"></i>
+        <span>Garantía Extendida</span>
+      </div>
+      <div class="elite-xp__pill">
+        <i class="bi bi-speedometer2"></i>
+        <span>Prueba de Manejo</span>
+      </div>
+      <div class="elite-xp__pill">
+        <i class="bi bi-headset"></i>
+        <span>Asesor Dedicado</span>
+      </div>
+      <div class="elite-xp__pill">
+        <i class="bi bi-patch-check-fill"></i>
+        <span>Autos Certificados</span>
+      </div>
+    </div>
+
+    <div class="elite-xp__ctas reveal-up">
+      <a href="#catalogo-section" class="elite-xp__cta-primary">
+        <i class="bi bi-car-front-fill"></i> Explorar Catálogo
+      </a>
+      <a href="#contacto-section" class="elite-xp__cta-secondary">
+        <i class="bi bi-telephone-fill"></i> Hablar con un asesor
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Flecha scroll hacia abajo -->
+  <div class="elite-xp__scroll-hint">
+    <i class="bi bi-chevron-double-down"></i>
+  </div>
+
+</section>
+
 
   <!-- ════ KNOWLEDGE ════ -->
   <section class="knowledge">
@@ -708,7 +1035,7 @@
         <a href="#catalogo-section" class="cta-2">Explorar Modelos</a>
       </div>
       <figure class="knowledge__picture">
-        <img src="./public/assets/images/Pc Inside.png" class="knowledge__img" alt="Asesoría AutoElite">
+        <img src="./public/assets/favicon/autoelite_logo_favicon.svg" class="knowledge__img" alt="Asesoría AutoElite">
       </figure>
     </div>
   </section>
@@ -865,7 +1192,7 @@
       <div class="footer__section">
         <h3 class="footer__title">
           <span style="color: #f5f0e8 !important;">Auto</span>Elite
-          <img src="./public/assets/favicon/AutoElite-favicon.png" class="favicon" alt="">
+          <img src="./public/assets/favicon/AutoElite-favicon.svg" class="favicon" alt="AutoElite">
         </h3>
         <div class="footer__content">
           <div class="footer__contact">
@@ -898,22 +1225,22 @@
       <div class="footer__section">
         <h3 class="footer__title">Catálogo</h3>
         <div class="footer__links">
-          <a href="https://www.nissan.com.mx/autos/versa.html" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-car-front"></i> Nissan Versa 2024</a>
-          <a href="https://www.honda.com.mx/autos/cr-v.html" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-car-front"></i> Honda CR-V 2024</a>
-          <a href="https://www.ford.com.mx/autos/mustang/" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-car-front"></i> Ford Mustang GT</a>
-          <a href="https://www.toyota.com.mx/hilux" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-truck"></i> Toyota Hilux 2024</a>
-          <a href="https://www.toyota.com.mx/prius" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-ev-front"></i> Toyota Prius 2024</a>
-          <a href="https://www.mazdamexico.com.mx/modelos/sedanes/mazda3-sedan" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-car-front"></i> Mazda 3 Signature</a>
+          <a href="https://www.nissan.mx" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-car-front"></i> Nissan Versa 2024</a>
+          <a href="https://www.honda.mx" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-car-front"></i> Honda CR-V 2024</a>
+          <a href="https://www.ford.mx" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-car-front"></i> Ford Mustang GT</a>
+          <a href="https://www.toyota.mx" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-truck"></i> Toyota Hilux 2024</a>
+          <a href="https://www.toyota.mx" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-ev-front"></i> Toyota Prius 2024</a>
+          <a href="https://www.mazda.mx" target="_blank" rel="noopener" class="footer__link"><i class="bi bi-car-front"></i> Mazda 3 Signature</a>
         </div>
       </div>
 
       <div class="footer__section">
         <h3 class="footer__title">Síguenos</h3>
         <div class="footer__social">
-          <a href="https://www.facebook.com/profile.php?id=61568955356110" target="_blank" rel="noopener" class="footer__social-icon" aria-label="Facebook">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener" class="footer__social-icon" aria-label="Facebook">
             <i class="bi bi-facebook"></i>
           </a>
-          <a href="https://github.com/AngelRomero89382/AutoElite" target="_blank" rel="noopener" class="footer__social-icon" aria-label="GitHub">
+          <a href="https://github.com/angelromero-dev/IntegradorSO-C2.git" target="_blank" rel="noopener" class="footer__social-icon" aria-label="GitHub">
             <i class="bi bi-github"></i>
           </a>
           <a href="https://wa.me/527774395441" target="_blank" rel="noopener" class="footer__social-icon" aria-label="WhatsApp">
@@ -942,6 +1269,22 @@
   <script>
     document.getElementById('currentYear').textContent = new Date().getFullYear();
   </script>
+  <script>
+  // Scroll reveal — IntersectionObserver
+  const revealEls = document.querySelectorAll('.reveal-up');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // solo una vez
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealEls.forEach(el => observer.observe(el));
+</script>
+
+<script src="./public/assets/js/animation/IntersectionObserver.js"></script>
   <script src="./public/assets/js/animation/nav.js"></script>
   <script src="./public/assets/js/animation/slider.js"></script>
   <script src="./public/assets/js/bootstrap/bootstrap.bundle.min.js"></script>

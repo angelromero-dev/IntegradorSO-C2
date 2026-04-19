@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img">
+  <title>AutoElite — Emblema</title>
+  <desc>Escudo hexagonal negro con monograma AE en dorado, logo de AutoElite Agencia Automotriz Premium</desc>
+
+  <defs>
+    <linearGradient id="goldMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#f0d080"/>
+      <stop offset="40%"  stop-color="#c9a84c"/>
+      <stop offset="70%"  stop-color="#e2c47a"/>
+      <stop offset="100%" stop-color="#9e7e35"/>
+    </linearGradient>
+    <linearGradient id="goldShine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#f5e09a"/>
+      <stop offset="50%"  stop-color="#c9a84c"/>
+      <stop offset="100%" stop-color="#7a5c1e"/>
+    </linearGradient>
+    <linearGradient id="shieldBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1e1e1e"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo circular para favicon -->
+  <circle cx="100" cy="100" r="98" fill="#0d0d0d" stroke="url(#goldMain)" stroke-width="1.5"/>
+
+  <!-- Escudo hexagonal -->
+  <polygon
+    points="100,14 158,48 158,148 100,182 42,148 42,48"
+    fill="url(#shieldBg)"
+    stroke="url(#goldMain)"
+    stroke-width="2.5"
+  />
+  <!-- Borde interior fino -->
+  <polygon
+    points="100,22 150,53 150,143 100,174 50,143 50,53"
+    fill="none"
+    stroke="url(#goldShine)"
+    stroke-width="0.7"
+    opacity="0.55"
+  />
+
+  <!-- Monograma A -->
+  <line x1="68"  y1="152" x2="90"  y2="54"  stroke="url(#goldShine)" stroke-width="6.5" stroke-linecap="round"/>
+  <line x1="90"  y1="54"  x2="112" y2="152" stroke="url(#goldShine)" stroke-width="6.5" stroke-linecap="round"/>
+  <line x1="76"  y1="117" x2="104" y2="117" stroke="url(#goldShine)" stroke-width="5.5" stroke-linecap="round"/>
+
+  <!-- Monograma E -->
+  <line x1="118" y1="54"  x2="118" y2="152" stroke="url(#goldShine)" stroke-width="6.5" stroke-linecap="round"/>
+  <line x1="118" y1="54"  x2="148" y2="54"  stroke="url(#goldShine)" stroke-width="6"   stroke-linecap="round"/>
+  <line x1="118" y1="103" x2="144" y2="103" stroke="url(#goldShine)" stroke-width="5.5" stroke-linecap="round"/>
+  <line x1="118" y1="152" x2="148" y2="152" stroke="url(#goldShine)" stroke-width="6"   stroke-linecap="round"/>
+
+  <!-- Rombo inferior decorativo -->
+  <polygon points="100,188 106,194 100,200 94,194" fill="url(#goldMain)" opacity="0.8"/>
+
+</svg>

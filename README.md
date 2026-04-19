@@ -115,4 +115,4 @@ meramente ilustrativa con fines académicos y sin ningún vínculo comercial.
 Desarrollador y diseñador del proyecto
 Abril 2026
 
-[![GitHub](https://img.shields.io/badge/GitHub-AngelRomero89382-black?logo=github)](https://github.com/angelromero-dev/IntegradorSO-C2.git)
+[![GitHub](https://img.shields.io/badge/GitHub-angelromero-dev-black?logo=github)](https://github.com/angelromero-dev/IntegradorSO-C2.git)
